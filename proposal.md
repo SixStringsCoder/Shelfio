@@ -19,64 +19,62 @@
 
 - Create <strong>Custom Collections</strong> to showcase comic books, book collections, music collections, stamps, coins, pictures, videos or even data collections!  Share any Collection using a direct link to that stored Collection or embed it in another webpage.
 
-<strong>Opening Screen to create a new collection or view other collections already created</strong>
+<strong><a name="samp1">Opening Screen to create a new collection or view other collections already created</a></strong>
 ![Opening Home Screen](images/open_screen2.jpeg)
-<a name="samp1">sample picture 1</a>
+sample picture 1
 <br><br>
 
 - The user creates a Collection's <em>Presentation Window</em> by using Drag-n-Drop form fields to enter details about the Collection, upload an ID icon plus add audio/video connected to the <em>Collectibles</em>.  This <em>Presentation Window</em> will show up as a <em>Modal Window</em> in the browser after the Collectible image icon is clicked.
 
-<strong>UI to build modal Presentation Window template</strong>
+<strong><a name="samp2">UI to build modal Presentation Window template<</a>/strong>
 ![The template area to build your modal-window presentation](images/build_form4.jpeg)
-<a name="samp2">sample picture 2</a>
+sample picture 2
 
-<strong>Here is a sample form template built by a user to enter data and represent the layout in the Modal Window. Click <em>Save Layout</em> button to Save this layout to the Collection.</strong>
+<strong><a name="samp3">Here is a sample form template built by a user to enter data and represent the layout in the Modal Window. Click <em>Save Layout</em> button to Save this layout to the Collection.</a></strong>
 ![A sample of how the template can be shaped using an eBook collection](images/build_form_sample4.jpeg)
-[sample picture 3](#samp3)
+sample picture 3
 <br><br>
 
 - Each Collectible is represented by a picture ID icon (uploaded by the user) and this icon, inserted in a <em>Styled Background</em> Collection area (see sample picture 6 - e.g. a bookshelf for a book collection, a stamp book for stamp collection, etc.) will act as the link to open the Modal Presentation Window revealing the Collectible's details entered in the form.
 
-<strong>A sample template using an example of an eBook collection.  After filling out the form and attaching links to the buttons and images, the user clicks "Add to Collection."  
-To add or remove form fields/buttons, the user can click the "Edit Layout" arriving back at the editing screen.</strong>
+<strong><a name="samp4">A sample template using an example of an eBook collection.  After filling out the form and attaching links to the buttons and images, the user clicks "Add to Collection."  
+To add or remove form fields/buttons, the user can click the "Edit Layout" arriving back at the editing screen.</a></strong>
 ![A sample of how the template can be shaped using an eBook collection](images/collectible_entry4.jpeg)
-[sample picture 4](#samp4)
+sample picture 4
 
-<strong>Collectible Added to <em>eBook Collection</em>.  Continue to enter in more Collectibles or use Menu icon in upper corner to view the <em>eBook Collection</em>, go to other collections or to Home Page.</strong>
+<strong><a name="samp5">Collectible Added to <em>eBook Collection</em>.  Continue to enter in more Collectibles or use Menu icon in upper corner to view the <em>eBook Collection</em>, go to other collections or to Home Page.</a></strong>
 ![Success Message message with option to continue adding more or going to other page via menu icon](images/collectible_success1.jpeg)
-[sample picture 5](#samp5)
+sample picture 5
 
 
 
-<strong>View of eBook Collection (Display View or Shelf View)</strong>
+<strong><a name="samp6">View of eBook Collection (Display View or Shelf View)</a></strong>
 ![Here's a view of eBook collection](images/eBook_collection2.jpeg)
-[sample picture 6](#samp6)
+sample picture 6
 <br><br>
 
-- When a picture icon is clicked, Presentation Modal Window opens to display details, linked buttons and related sites.
-
+- <strong><a name="samp7">When a picture icon is clicked, Presentation Modal Window opens to display details, linked buttons and related sites.</a></strong>
 ![Here's a sample of a Presentation Modal Window](images/pres_window.jpeg)
-[sample picture 7](#samp7)
+sample picture 7
 <br><br>
 
-- When the buttons at bottom of a Collection are clicked, they allow this Collection's webpage to be shared or embedded in other websites.
-
+- <strong><a name="samp8">When the buttons at bottom of a Collection are clicked, they allow this Collection's webpage to be shared or embedded in other websites.</a>
 ![The buttons on the Collection webpage allow a user to share this collection.](images/eBook_collection_btn.jpeg)
-[sample picture 8](#samp8)
+sample picture 8
 <br><br>
 
 
 
-- Share the weblink to this Collection for others to view this webpage or copy the embed code (example below) to display the collection with <em>Styled Background</em> in any webpage.
+- <strong><a name="samp9">Share the weblink to this Collection for others to view this webpage or copy the embed code (example below) to display the collection with <em>Styled Background</em> in any webpage.
 
-<strong>Embed code allows this Collection to show up on another website</strong>
+<strong>Embed code allows this Collection to show up on another website</a></strong>
 ![Embed code Collection  view sample](images/embed.jpeg)
-[sample picture 9](#samp9)
+sample picture 9
 
 <br>
-<strong>Same <em>Presentation Window</em> functionality when an icon is clicked.</strong>
+<strong><strong><a name="samp10">Same <em>Presentation Window</em> functionality when an icon is clicked.</strong>
 ![Embed code Modal Window  sample](images/embed_popUp.jpeg "Presentation Modal Window")
-[sample picture 10](#samp10)
+sample picture 10
 <br><br><br><br>
 
 
@@ -89,28 +87,28 @@ Annotate _every_ component of the interface _every_ action the user can take.
 - <strong>[Home Page](#samp1)</strong> <em>(sample picture 1)</em> with Simple Full-screen layout
   - two buttons on Home Page to CREATE and VIEW
     - Create a Collection click leads to:
-      - <strong>[Presentation Window](#samp2) UI Builder</strong> then to...
-      - <strong><a name="samp4">Add to Collection</a> </strong>webpage
+      - <strong>[Presentation Window UI Builder](#samp2)</strong> then to...
+      - <strong>[Add to Collection](#samp4) </strong>webpage
     - View saved collections (e.g. <em>All My Collections</em>) click leads to:
-      - <strong><a name="samp6">Collection</a> "shelf" webpage</strong> with clickable Collectible icons as well as Share and Embed buttons
-        - Icon click shows <a name="samp7">Presentation Window</a> revealing a collectible's details. Close this window by clicking "X".
-        - <a name="samp8">Share button</a> copies webpage URL to clipboard and shows message "Collection link copied to clipboard"
-        - <a name="samp8">Embed button</a> copies script embed code to clipboard then shows message "Collection embed code copied to clipboard"
+      - <strong>[Collection](#samp6) "shelf" webpage</strong> with clickable Collectible icons as well as Share and Embed buttons
+        - Icon click shows [Presentation Window](#samp7) revealing a collectible's details. Close this window by clicking "X".
+        - [Share button](#samp8) copies webpage URL to clipboard and shows message "Collection link copied to clipboard"
+        - [Embed button](#samp8) copies script embed code to clipboard then shows message "Collection embed code copied to clipboard"
 
 
 
 ### Frontend vs. Background activity
 If there is any actions your app needs to take in the background describe _each_ of them and how they change the underlying data your app saves.
 
-- Home Page <a name="samp1">'Create a Collection'</a> button when clicked
+- Home Page ['Create a Collection'](#samp1) button when clicked
   1. open a prompt to ask the user to name the new Collection
   2. backend creates a new HTML file and names it the same (from given "blank" HTML template with pre-made <form> nodes)
 
-- Starting off Building a Collection <a name="samp2"><em>form/Presentation Window</em></a>,
+- Starting off Building a Collection [<em>form/Presentation Window</em>](#samp2),
   1. as the form is being built, HTML input nodes are being appended to the form). ****Maybe Pre-built form will be better to start with.
   2. The <em>Save Layout</em> button saves the Collection's HTML file.
 
-- <a name="samp2">Add to Collection button</a> takes the Collectible's form data and stores it as an key/value pair in an array/list.  The picture ID icon is stored in an image folder.
+- [Add to Collection button](#samp2) takes the Collectible's form data and stores it as an key/value pair in an array/list.  The picture ID icon is stored in an image folder.
 
 - Share/Embed buttons code copied to clipboard and
 
@@ -133,10 +131,10 @@ I literally mean _every_.
 What are the persistent "nouns" you need to save across pages in your project MVP?
 What do they represent?
 
-- <a name="samp2">Collection's UI Builder Form</a>
+- [Collection's UI Builder Form](#samp2)
   1. picture ID file (large and thumbnail?)
   2.
-- <a name="samp6">Collection's "Display" View</a>
+- [Collection's "Display" View](#samp6)
 -
 
 We'll be using a relational database which models things like a spreadsheet.
