@@ -21,14 +21,14 @@
 
 <strong>Opening Screen to create a new collection or view other collections already created</strong>
 ![Opening Home Screen](images/open_screen2.jpeg)
-[sample picture 1](#samp1)
+<a name="samp1">sample picture 1</a>
 <br><br>
 
 - The user creates a Collection's <em>Presentation Window</em> by using Drag-n-Drop form fields to enter details about the Collection, upload an ID icon plus add audio/video connected to the <em>Collectibles</em>.  This <em>Presentation Window</em> will show up as a <em>Modal Window</em> in the browser after the Collectible image icon is clicked.
 
 <strong>UI to build modal Presentation Window template</strong>
 ![The template area to build your modal-window presentation](images/build_form4.jpeg)
-[sample picture 2](#samp2)
+<a name="samp2">sample picture 2</a>
 
 <strong>Here is a sample form template built by a user to enter data and represent the layout in the Modal Window. Click <em>Save Layout</em> button to Save this layout to the Collection.</strong>
 ![A sample of how the template can be shaped using an eBook collection](images/build_form_sample4.jpeg)
@@ -86,10 +86,10 @@ Spend some time drawing out on paper mockups _every_ page of your MVP site.
 Annotate _every_ component of the interface _every_ action the user can take.
 
 <strong>Website Tree</strong> (separate webpages bolded and linked to pictures)
-- <strong><a name="samp1">Home Page</a></strong> <em>(sample picture 1)</em> with Simple Full-screen layout
+- <strong>[Home Page](#samp1)</strong> <em>(sample picture 1)</em> with Simple Full-screen layout
   - two buttons on Home Page to CREATE and VIEW
     - Create a Collection click leads to:
-      - <strong><a name="samp2">Presentation Window</a> UI Builder</strong> then to...
+      - <strong>[Presentation Window](#samp2) UI Builder</strong> then to...
       - <strong><a name="samp4">Add to Collection</a> </strong>webpage
     - View saved collections (e.g. <em>All My Collections</em>) click leads to:
       - <strong><a name="samp6">Collection</a> "shelf" webpage</strong> with clickable Collectible icons as well as Share and Embed buttons
