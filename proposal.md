@@ -72,8 +72,8 @@ sample picture 8
 sample picture 9
 
 <br>
-<strong><strong><a name="samp10">Same <em>Presentation Window</em> functionality when an icon is clicked.</a></strong>
-![Embed code Modal Window  sample](images/embed_popUp.jpeg "Presentation Modal Window")
+<strong><a name="samp10">Same <em>Presentation Window</em> functionality when an icon is clicked.</a></strong>
+![Embed code Modal Presentation Window  sample](images/embed_popUp.jpeg)
 sample picture 10
 <br><br><br><br>
 
@@ -162,7 +162,7 @@ It's okay if they end up not working and you have to change your plans.
 
 - jQuery UI ("draggable") for drag and drop feature to make <a name="samp2">form/Presentation Window</a>
 
-
+- Bootstrap to help with form presentation and overall website appearance.
 
 
 ### Schedule
