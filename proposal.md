@@ -72,7 +72,7 @@ sample picture 8
 sample picture 9
 
 <br>
-<strong><strong><a name="samp10">Same <em>Presentation Window</em> functionality when an icon is clicked.</strong>
+<strong><strong><a name="samp10">Same <em>Presentation Window</em> functionality when an icon is clicked.</a></strong>
 ![Embed code Modal Window  sample](images/embed_popUp.jpeg "Presentation Modal Window")
 sample picture 10
 <br><br><br><br>
