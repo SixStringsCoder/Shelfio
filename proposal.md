@@ -9,8 +9,6 @@
 # Custom Collections
 ###### Alternative product name list
 - Clickable Collectibles
-- Here's My Case
-- Love Set Match
 - Pack Rat
 - Collect-N-spect
 
@@ -68,7 +66,7 @@ sample picture 8
 - <strong><a name="samp9">Share the weblink to this Collection for others to view this webpage or copy the embed code (example below) to display the collection with <em>Styled Background</em> in any webpage.
 
 <strong>Embed code allows this Collection to show up on another website</a></strong>
-![Embed code Collection  view sample](images/embed.jpeg)
+![Embed code Collection view sample](images/embed.jpeg)
 sample picture 9
 
 <br>
@@ -114,16 +112,21 @@ If there is any actions your app needs to take in the background describe _each_
 
 
 
-
+### MVP
 **Pick the minimum feature set for your product to work.**
 Everything else should go in the "further work" section.
 
-- Pre-made Presentation Window/form layout
+##### Models
+- 2 table database (Collection and Collectible) ForeignKey
+
+##### Templates
+- [Home HTML](https://startbootstrap.com/template-overviews/the-big-picture/)
+- [Collectible Form HTML (Editing Presentation Window)](#samp5)
+- [Single Collection HTML (with Presentation Modal Window)](#samp6)
+- [All Collections HTML](https://startbootstrap.com/template-overviews/thumbnail-gallery/)
 
 
-
-You don't have to submit the mockup drawings, but do write out a description of _every_ page and component and action.
-I literally mean _every_.
+Write out a description of _every_ page and component and action!!!!!!
 
 
 ### Data Model
@@ -131,24 +134,47 @@ I literally mean _every_.
 What are the persistent "nouns" you need to save across pages in your project MVP?
 What do they represent?
 
-- [Collection's UI Builder Form](#samp2)
-  1. picture ID file (large and thumbnail?)
-  2.
-- [Collection's "Display" View](#samp6)
--
+- [Collection](#samp6) ------> Collection Sets (e.g. books,
+  stamps, DVDs, music,)
+- [Collectible (item)](#samp4) ---------> A single item in a Collection
 
-We'll be using a relational database which models things like a spreadsheet.
-There are fixed fields and every instance
 
 How do you need to _search_ for specific instances of nouns?
 
+### Collection
+- Collection ID art (user upload)
+- Type of Collection (e.g. music)
+- Sub-category 1 (e.g. Jazz, classical)
+- Sub-category 2 (e.g. Bebop, Impressionistic)
+- Start date
+- Status (private or public)
+
+### Collectible Item
+- photo ID/cover art (user upload)
+- name
+- description
+- Author/Composer
+- Artist
+- Publisher
+- Year Published
+- Copyright year
+- serial number
+- classification/genre
+- media type 1
+- media link 1
+- media type 2
+- media link 2
+- media type 3
+- media link 3
+- date created
+- date last saved
 
 
 ### Technical Components
-
 What are the "moving parts" of your MVP?
 What are the things like "modules" you're going to write?
 How do they talk to each other?
+
 
 
 
@@ -160,7 +186,8 @@ It's okay if they end up not working and you have to change your plans.
 
 - WSIWYG editor plug-in for user to customize Presentation Window and Collection's Display View
 
-- jQuery UI ("draggable") for drag and drop feature to make <a name="samp2">form/Presentation Window</a>
+- jQuery UI (use "draggable" and "droppable" interactions https://jqueryui.com/droppable/) for drag and drop feature to make <a name="samp2">form/Presentation Window</a>.  
+Also this plug-in for drag and drop jQuery form maker: https://formbuilder.online/
 
 - Bootstrap to help with form presentation and overall website appearance.
 
