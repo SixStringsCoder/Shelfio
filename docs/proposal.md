@@ -1,6 +1,6 @@
 
 
-![The Shelf where collectibles are presented](images/custom_collection2.jpeg)
+![The Shelf where collectibles are presented](docs/images/custom_collection2.jpeg)
 
 ### Capstone Proposal 2017<br>by Steve Hanlon
 
@@ -18,46 +18,46 @@
 - Create <strong>Custom Collections</strong> to showcase comic books, book collections, music collections, stamps, coins, pictures, videos or even data collections!  Share any Collection using a direct link to that stored Collection or embed it in another webpage.
 
 <strong><a name="samp1">Opening Screen to create a new collection or view other collections already created</a></strong>
-![Opening Home Screen](images/open_screen2.jpeg)
+![Opening Home Screen](docs/images/open_screen2.jpeg)
 sample picture 1
 <br><br>
 
 - The user creates a Collection's <em>Presentation Window</em> by using Drag-n-Drop form fields to enter details about the Collection, upload an ID icon plus add audio/video connected to the <em>Collectibles</em>.  This <em>Presentation Window</em> will show up as a <em>Modal Window</em> in the browser after the Collectible image icon is clicked.
 
 <strong><a name="samp2">UI to build modal Presentation Window template<</a>/strong>
-![The template area to build your modal-window presentation](images/build_form4.jpeg)
+![The template area to build your modal-window presentation](docs/images/build_form4.jpeg)
 sample picture 2
 
 <strong><a name="samp3">Here is a sample form template built by a user to enter data and represent the layout in the Modal Window. Click <em>Save Layout</em> button to Save this layout to the Collection.</a></strong>
-![A sample of how the template can be shaped using an eBook collection](images/build_form_sample4.jpeg)
+![A sample of how the template can be shaped using an eBook collection](docs/images/build_form_sample4.jpeg)
 sample picture 3
 <br><br>
 
 - Each Collectible is represented by a picture ID icon (uploaded by the user) and this icon, inserted in a <em>Styled Background</em> Collection area (see sample picture 6 - e.g. a bookshelf for a book collection, a stamp book for stamp collection, etc.) will act as the link to open the Modal Presentation Window revealing the Collectible's details entered in the form.
 
-<strong><a name="samp4">A sample template using an example of an eBook collection.  After filling out the form and attaching links to the buttons and images, the user clicks "Add to Collection."  
+<strong><a name="samp4">A sample template using an example of an eBook collection.  After filling out the form and attaching links to the buttons and docs/images, the user clicks "Add to Collection."  
 To add or remove form fields/buttons, the user can click the "Edit Layout" arriving back at the editing screen.</a></strong>
-![A sample of how the template can be shaped using an eBook collection](images/collectible_entry4.jpeg)
+![A sample of how the template can be shaped using an eBook collection](docs/images/collectible_entry4.jpeg)
 sample picture 4
 
 <strong><a name="samp5">Collectible Added to <em>eBook Collection</em>.  Continue to enter in more Collectibles or use Menu icon in upper corner to view the <em>eBook Collection</em>, go to other collections or to Home Page.</a></strong>
-![Success Message message with option to continue adding more or going to other page via menu icon](images/collectible_success1.jpeg)
+![Success Message message with option to continue adding more or going to other page via menu icon](docs/images/collectible_success1.jpeg)
 sample picture 5
 
 
 
 <strong><a name="samp6">View of eBook Collection (Display View or Shelf View)</a></strong>
-![Here's a view of eBook collection](images/eBook_collection2.jpeg)
+![Here's a view of eBook collection](docs/images/eBook_collection2.jpeg)
 sample picture 6
 <br><br>
 
 - <strong><a name="samp7">When a picture icon is clicked, Presentation Modal Window opens to display details, linked buttons and related sites.</a></strong>
-![Here's a sample of a Presentation Modal Window](images/pres_window.jpeg)
+![Here's a sample of a Presentation Modal Window](docs/images/pres_window.jpeg)
 sample picture 7
 <br><br>
 
 - <strong><a name="samp8">When the buttons at bottom of a Collection are clicked, they allow this Collection's webpage to be shared or embedded in other websites.</a>
-![The buttons on the Collection webpage allow a user to share this collection.](images/eBook_collection_btn.jpeg)
+![The buttons on the Collection webpage allow a user to share this collection.](docs/images/eBook_collection_btn.jpeg)
 sample picture 8
 <br><br>
 
@@ -66,12 +66,12 @@ sample picture 8
 - <strong><a name="samp9">Share the weblink to this Collection for others to view this webpage or copy the embed code (example below) to display the collection with <em>Styled Background</em> in any webpage.
 
 <strong>Embed code allows this Collection to show up on another website</a></strong>
-![Embed code Collection view sample](images/embed.jpeg)
+![Embed code Collection view sample](docs/images/embed.jpeg)
 sample picture 9
 
 <br>
 <strong><a name="samp10">Same <em>Presentation Window</em> functionality when an icon is clicked.</a></strong>
-![Embed code Modal Presentation Window  sample](images/embed_popUp.jpeg)
+![Embed code Modal Presentation Window  sample](docs/images/embed_popUp.jpeg)
 sample picture 10
 <br><br><br><br>
 
