@@ -1,6 +1,6 @@
 
 
-![The Shelf where collectibles are presented](docs/images/custom_collection2.jpeg)
+![The Shelf where collectibles are presented](docs/images/custom_collection3.jpeg)
 
 ### Capstone Proposal 2017<br>by Steve Hanlon
 
@@ -142,6 +142,7 @@ What do they represent?
 How do you need to _search_ for specific instances of nouns?
 
 ### Collection
+- owner
 - Collection ID art (user upload)
 - Type of Collection (e.g. music)
 - Sub-category 1 (e.g. Jazz, classical)
@@ -153,7 +154,7 @@ How do you need to _search_ for specific instances of nouns?
 - photo ID/cover art (user upload)
 - name
 - description
-- Author/Composer
+- Author/Composer or Creator
 - Artist
 - Publisher
 - Year Published

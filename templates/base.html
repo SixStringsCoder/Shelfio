@@ -8,30 +8,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Shelfio</title>
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="https://apple-touch-icon.png">
 
-    <link rel="stylesheet" href="/static/vendor/normalize.css">
-    <link rel="stylesheet" type="text/stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    {% load static %}
+    {% block extra_head %}
+        <link rel="stylesheet" href="{% static "vendor/normalize.css" %}" type="text/css"/>
+        <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css"/>
+    {% endblock %}
 
 </head>
 
 <body>
+    <main>
+        <h1>This is Base HTML!</h1>
 
-{# Top #}
-{% block headline %}
-{% endblock %}
+        <nav>
+{#            {%  include nav.html %}#}
+        </nav>
 
-{# Middle #}
-{% block main %}
-{% endblock %}
+        <header>
+            {# Top #}
+            {% block header %}
+            {% endblock %}
+        </header>
 
-{# Bottom #}
-{% block main %}
-{% endblock %}
+        <section>
+            {# Middle #}
+            {% block main %}
+            {% endblock %}
+        </section>
+
+        <footer>
+            {# Bottom #}
+            {% block footer %}
+            {% endblock %}
+        </footer>
+    </main>
 
 
 <script src="/static/vendor/jquery-3.2.1.min.js"></script>
