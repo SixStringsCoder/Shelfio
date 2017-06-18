@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from collection.views import home
 
 urlpatterns = [
+    # url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
     # url(r'^/collection', collection, name='collection'),

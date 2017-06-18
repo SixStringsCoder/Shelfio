@@ -35,34 +35,31 @@ class Collection(models.Model):
         ('PUBL', 'Public'),
     )
 
-    owner =  models.ForeignKey(User, related_name="collections")
+    owner = models.ForeignKey(User, related_name="collections")
+    status = models.CharField(max_length=4, choices=STATUS_CHOICES)
     image = models.ImageField(upload_to=image_upload_handler, height_field=None, width_field=None, max_length=100)
     name = models.CharField(max_length=256)
     type = models.CharField(max_length=128)
+    categories = models.ManyToManyField(Category, related_name='collections')
     created = models.DateTimeField()
     modified = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=4, choices=STATUS_CHOICES)
-    categories = models.ManyToManyField(Category, related_name='collections')
 
     def save(self, *args, **kwargs):
-        # auto-save if file is new, i.e. it has no ID yet
+        # auto-save if file is new and has no ID yet
         if not self.id:
             self.created = datetime.now()
 
         super().save(*args, **kwargs)
 
-
     def __str__(self):
         return self.name
 
 
-
 class Collectible(models.Model):
     """
-    Describes and defines an item or Collectible within a Collection
+    Describes and defines an item or collectible within a Collection
 
     """
-
 
     collection = models.ForeignKey(Collection, related_name="items")
     image = models.ImageField(upload_to=image_upload_handler, height_field=None, width_field=None, max_length=100)
@@ -75,7 +72,8 @@ class Collectible(models.Model):
     copyright = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     identifier = models.IntegerField(blank=True, null=True)
     classification = models.ManyToManyField(Category, related_name='collectibles')
-
+    created = models.DateTimeField(auto_now=True)
+    modified = models.DateTimeField(auto_now_add=True)
 
 
 class Link(models.Model):

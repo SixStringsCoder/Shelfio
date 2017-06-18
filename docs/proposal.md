@@ -136,21 +136,24 @@ What do they represent?
 
 - [Collection](#samp6) ------> Collection Sets (e.g. books,
   stamps, DVDs, music,)
-- [Collectible (item)](#samp4) ---------> A single item in a Collection
+- [collectible (item)](#samp4) ---------> A single item in a Collection
 
 
 How do you need to _search_ for specific instances of nouns?
 
-### Collection
-- owner
-- Collection ID art (user upload)
-- Type of Collection (e.g. music)
-- Sub-category 1 (e.g. Jazz, classical)
-- Sub-category 2 (e.g. Bebop, Impressionistic)
-- Start date
-- Status (private or public)
+### Category
+- name (allows for user to make sub-categories expanding on "type" in Collection model
 
-### Collectible Item
+### Collection
+- owner (Foreign Key)
+- image (user upload)
+- name of Collection (e.g. My Paintings from the 70's)
+- type of Collection (e.g. visual art - oil on canvas)
+- categories (Many to many relationship) (e.g. Jazz, classical)
+- created (date)
+- status (private or public)
+
+### Collectible/Item
 - photo ID/cover art (user upload)
 - name
 - description
@@ -160,15 +163,15 @@ How do you need to _search_ for specific instances of nouns?
 - Year Published
 - Copyright year
 - serial number
-- classification/genre
-- media type 1
-- media link 1
-- media type 2
-- media link 2
-- media type 3
-- media link 3
+- classification (Many to Many Relationship)
 - date created
 - date last saved
+
+### Link
+- name
+- link
+- collectible (Foreign Key)
+
 
 
 ### Technical Components

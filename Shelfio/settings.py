@@ -57,8 +57,7 @@ ROOT_URLCONF = 'Shelfio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,8 +128,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "collectible", "static"),
     os.path.join(BASE_DIR, "accounts", "static"),
 
+
 ]
 
+
+# uploaded Media files stored in user's media folder
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
