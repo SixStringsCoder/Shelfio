@@ -18,12 +18,15 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from collection.views import home
+from collection.views import home, base, collection, collectible_form, contact, about
 
 urlpatterns = [
     # url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
-    # url(r'^/collection', collection, name='collection'),
-    # url(r'^/collectible', collectible_form, name='collection'),
+    url(r'^base', base, name='base'),
+    url(r'^collection', collection, name='collection'),
+    url(r'^collectible', collectible_form, name='collectible'),
+    url(r'^contact', contact, name='contact'),
+    url(r'^about', about, name='about'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

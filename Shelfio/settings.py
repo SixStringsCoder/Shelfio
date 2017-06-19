@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'collection.apps.CollectionConfig',
-    'collectible.apps.CollectibleConfig',
     'accounts.apps.AccountsConfig',
 ]
 
@@ -125,7 +124,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "collection", "static"),
-    os.path.join(BASE_DIR, "collectible", "static"),
     os.path.join(BASE_DIR, "accounts", "static"),
 
 
@@ -134,5 +132,4 @@ STATICFILES_DIRS = [
 
 # uploaded Media files stored in user's media folder
 MEDIA_URL = '/media/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")

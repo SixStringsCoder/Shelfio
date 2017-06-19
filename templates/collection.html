@@ -1,15 +1,90 @@
 {% extends 'base.html' %}
+<!-- Bootstrap theme from https://startbootstrap.com/template-overviews/thumbnail-gallery/ -->
+<html>
+    <head>
+        <title>Shelfio - Collections View</title>
+{#        {% load static %}#}
+{#        {% block extra_head %}#}
+{#        {% endblock %}#}
+        <link rel="stylesheet" href="/collection/static/collection/css/collection.css">
+    </head>
 
 
+    <section>
+        {# Collection Display Shelf #}
+        {% block content %}
 
+            <div class="container">
+                <div class="row">
 
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Collection Gallery</h1>
+                    </div>
 
-        <section>
-            {# Collection Display Shelf #}
-            {% block main %}
-                <ul class="shelf">
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                        </a>
+                    </div>
 
-                </ul>
-            {% endblock %}
-        </section>
+                </div> <!-- end #row-->
+            </div> <!-- end .container-->
+        {% endblock %}
+
+    </section>
 

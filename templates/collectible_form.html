@@ -1,11 +1,28 @@
 {% extends 'base.html' %}
 
 
-        <section>
-            {# Collectible Form Maker #}
-            {% block main %}
-                <form class="item">
-
-                </form>
-            {% endblock %}
-        </section>
+    <div id="collect_form">
+        {# Collectible Form Maker #}
+        {% block content %}
+            <h4>Fill out this form</h4>
+                <fieldset>
+                    <form class="item">
+                    <label>Name:
+                    <input type="text" placeholder="type here">
+                    </label><br>
+                    <label>Description:
+                    <input type="text" placeholder="type here">
+                    </label><br>
+                    <label>Author:
+                    <input type="text" placeholder="type here">
+                    </label><br>
+                    <label>Artist:
+                    <input type="text" placeholder="type here">
+                    </label><br>
+                    <label>Publisher:
+                    <input type="text" placeholder="type here">
+                    </label><br>
+                    </form>
+                </fieldset>
+        {% endblock %}
+    </div>

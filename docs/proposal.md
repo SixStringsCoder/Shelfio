@@ -6,11 +6,14 @@
 
 
 
-# Custom Collections
+# Shelfio
 ###### Alternative product name list
 - Clickable Collectibles
 - Pack Rat
 - Collect-N-spect
+- Shelfio or sHelpio
+- Amphora
+- Decluttero
 
 
 ### Product Overview
@@ -22,7 +25,7 @@
 sample picture 1
 <br><br>
 
-- The user creates a Collection's <em>Presentation Window</em> by using Drag-n-Drop form fields to enter details about the Collection, upload an ID icon plus add audio/video connected to the <em>Collectibles</em>.  This <em>Presentation Window</em> will show up as a <em>Modal Window</em> in the browser after the Collectible image icon is clicked.
+- The user creates a Collection's <em>Presentation Window</em> using form fields to enter details about the Collection as well as uploading an "ID" icon connected to a <em>Collectible item</em>.  This <em>Presentation Window</em> will show up as a <em>Modal Window</em> in the browser after the Collectible ID image icon is clicked.
 
 <strong><a name="samp2">UI to build modal Presentation Window template<</a>/strong>
 ![The template area to build your modal-window presentation](docs/images/build_form4.jpeg)
