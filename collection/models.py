@@ -1,7 +1,10 @@
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
+
+# add a Priority Field to help user organize a Collection
 
 def image_upload_handler(instance, filename) -> str:
     """
@@ -17,8 +20,16 @@ class Category(models.Model):
     Create categories and subcategories
 
     """
+    # TODO: make slugs unique for user.
 
     name = models.CharField(max_length=128)
+    slug = models.SlugField(editable=False, blank=True, null=False)
+
+    def save(self, *args, **kwargs):
+        # auto-save and auto-correct spaces to hyphens
+        self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name
@@ -26,7 +37,7 @@ class Category(models.Model):
 
 class Collection(models.Model):
     """
-    Describes and defines a Collection
+    Defines a Collection table
 
     """
 
@@ -43,11 +54,14 @@ class Collection(models.Model):
     categories = models.ManyToManyField(Category, related_name='collections')
     created = models.DateTimeField()
     modified = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(editable=False, blank=True, null=False)
 
     def save(self, *args, **kwargs):
         # auto-save if file is new and has no ID yet
         if not self.id:
             self.created = datetime.now()
+
+        self.slug = slugify(self.name)
 
         super().save(*args, **kwargs)
 
@@ -57,7 +71,7 @@ class Collection(models.Model):
 
 class Collectible(models.Model):
     """
-    Describes and defines an item or collectible within a Collection
+    Defines an item or collectible table (within a Collection)
 
     """
 
@@ -74,6 +88,16 @@ class Collectible(models.Model):
     classification = models.ManyToManyField(Category, related_name='collectibles')
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(editable=False, blank=True, null=False)
+
+    def save(self, *args, **kwargs):
+        # auto-save and auto-correct spaces to hyphens
+        self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name
 
 
 class Link(models.Model):
@@ -85,3 +109,12 @@ class Link(models.Model):
     name = models.CharField(max_length=256)
     link = models.FileField(null=True, blank=True)
     collectible = models.ForeignKey(Collectible, related_name="links")
+    slug = models.SlugField(editable=False, blank=True, null=False)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.name

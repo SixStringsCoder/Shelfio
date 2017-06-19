@@ -13,20 +13,26 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-from collection.views import home, base, collection, collectible_form, contact, about
+from collection.views import home, base, contact, about
 
 urlpatterns = [
     # url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
+
+    url(r'^base', base, name='base'),
+
+    # The Admin
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name='home'),
-    url(r'^base', base, name='base'),
-    url(r'^collection', collection, name='collection'),
-    url(r'^collectible', collectible_form, name='collectible'),
     url(r'^contact', contact, name='contact'),
     url(r'^about', about, name='about'),
+
+
+    # Collection App
+    url(r'^collections/', include('collection.urls')),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
