@@ -38,7 +38,7 @@ def collection(request, slug):
     """
 
     collection = Collection.objects.get(slug=slug)
-    context = { 'collection': collection}
+    context = {'collection': collection}
     return render(request, 'collection.html', context)
 
 
@@ -51,14 +51,14 @@ def collectible_form(request):
     return render(request, 'collectible_form.html')
 
 
-def collectible_view(request, pk):
+def collectible(request, collectible_slug):
     """
     A single collectible display view
 
     """
-    collectible =  Collectible.objects.get(id=pk)
+    collectible =  Collectible.objects.get(slug=collectible_slug)
     context = {'collectible': collectible}
-    return render(request, 'collectible_view.html', context)
+    return render(request, 'collectible.html', context)
 
 
 def collectible_edit(request, pk):

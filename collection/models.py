@@ -4,15 +4,25 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 
 
-# add a Priority Field to help user organize a Collection
+    # TODO: add a Priority Field to help user organize a Collection
 
-def image_upload_handler(instance, filename) -> str:
+def collection_upload_handler(instance, filename) -> str:
     """
     Handler to provide link to Collection and Collectible images
     :return:
     """
     username = instance.owner.username
-    return f"{username}/{filename}"
+    return f"{username}/{instance.name}/{filename}"
+
+
+def collectible_upload_handler(instance, filename) -> str:
+    """
+    Handler to provide link to Collection and Collectible images
+    :return:
+    """
+    username = instance.collection.owner.username
+    collection = instance.name
+    return f"{username}/{collection}/{filename}"
 
 
 class Category(models.Model):
@@ -48,7 +58,7 @@ class Collection(models.Model):
 
     owner = models.ForeignKey(User, related_name="collections")
     status = models.CharField(max_length=4, choices=STATUS_CHOICES)
-    image = models.ImageField(upload_to=image_upload_handler, height_field=None, width_field=None, max_length=100)
+    image = models.ImageField(upload_to=collection_upload_handler, height_field=None, width_field=None, max_length=100)
     name = models.CharField(max_length=256)
     type = models.CharField(max_length=128)
     categories = models.ManyToManyField(Category, related_name='collections')
@@ -76,7 +86,7 @@ class Collectible(models.Model):
     """
 
     collection = models.ForeignKey(Collection, related_name="items")
-    image = models.ImageField(upload_to=image_upload_handler, height_field=None, width_field=None, max_length=100)
+    image = models.ImageField(upload_to=collectible_upload_handler, height_field=None, width_field=None, max_length=100)
     name = models.CharField(max_length=256)
     description = models.TextField()
     creator = models.CharField(max_length=128)

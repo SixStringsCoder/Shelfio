@@ -31,6 +31,10 @@ Home Page for Shelfio Web Application - created June 17, 2017 by Steve Hanlon
     transition: color .4s;
 }
 
+.navbar-inverse .navbar-nav>li {
+    color: #fff !important;
+}
+
 .navbar-inverse .navbar-nav>li>a {
     color: #f7f7f7;
     transition: color .4s;
@@ -40,9 +44,7 @@ Home Page for Shelfio Web Application - created June 17, 2017 by Steve Hanlon
     color: #E84B00;
 }
 
-li {
-    color: #fff !important;
-}
+
 
 
 /*--------------------
@@ -59,6 +61,7 @@ body {
 main {
     background-color: #FFDA00;
     height: 100%;
+    padding-top: 4%;
     padding-bottom: 3%;
 }
 
@@ -90,6 +93,7 @@ main {
 h1 {
     color: #101010;
     font-size: 8em;
+    padding-top: 40px;
     font-family: 'Days One', sans-serif;
     /*text-shadow: 2px 3px #f6f6f6;*/
 }
@@ -155,13 +159,3 @@ footer {
 
 
 
-/*--------------------
-   Collectible Form
-----------------------*/
-
-#collect_form fieldset {
-    margin-top: 300px;
-    height: 100vh;
-    background-color: red;
-
-}

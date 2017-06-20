@@ -2,5 +2,55 @@
  Created on June 16th by Steve Hanlon.  CSS file for collection app.
 */
 
+/*--------------------
+   Collectible Form
+----------------------*/
 
 
+/*--------------------
+   Collectible View
+----------------------*/
+
+#coll_container {
+    display: flex;
+    justify-content: center;
+}
+
+
+#collect_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("/static/collection/images/bg/paper.jpeg") no-repeat center center;
+    background-size: 100% 100%;
+    width: 70%;
+    padding: 4%;
+    box-shadow: 1px 1px 2px black;
+}
+
+.coll_header {
+    color: #E84B00;
+}
+
+
+#specs_head {
+    font-size: 1.3em;
+    text-decoration: underline;
+}
+
+.coll_specs span {
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.3em;
+    line-height: 200%;
+}
+
+
+
+
+/*--------------------
+   Collectible Edit
+----------------------*/

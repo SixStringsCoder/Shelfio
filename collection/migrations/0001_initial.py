@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
             name='Collectible',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to=collection.models.image_upload_handler)),
+                ('image', models.ImageField(upload_to=collection.models.collectible_upload_handler)),
                 ('name', models.CharField(max_length=256)),
                 ('description', models.TextField()),
                 ('creator', models.CharField(max_length=128)),
@@ -47,7 +47,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('status', models.CharField(choices=[('PRIV', 'Private'), ('PUBL', 'Public')], max_length=4)),
-                ('image', models.ImageField(upload_to=collection.models.image_upload_handler)),
+                ('image', models.ImageField(upload_to=collection.models.collection_upload_handler)),
                 ('name', models.CharField(max_length=256)),
                 ('type', models.CharField(max_length=128)),
                 ('created', models.DateTimeField()),

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+
+    {%  block title %}
+        <title>Collectible View</title>
+    {% endblock %}
+
+    {% block extra_head %}
+         <link rel="stylesheet" type="text/css" href="/static/collection/css/collection.css">
+
+    {% endblock %}
+
+
+{% block content %}
+    {# Collectible Detail View #}
+
+    <section id="coll_container">
+
+        <div id="collect_detail">
+
+            {# Collection name #}
+            <h5 class="coll_header_2">{{ collectible.collection }}</h5>
+
+            {# Collectible Image and Name #}
+            <figure class="coll_img">
+                <img src="{{ collectible.image.url }}">
+    {#            <figcaption>{{ collectible.name }}</figcaption>#}
+            </figure>
+
+            {# Collectible Heading #}
+            <h3 class="coll_header">{{ collectible.name }}</h3>
+
+
+
+
+            {# Collectible description #}
+            <section class="description">
+            <p>{{ collectible.description }}</p>
+            </section>
+
+            <hl id="specs_head"><strong>Details</strong></hl>
+            <ul class="coll_specs">
+                <li><span>Manufactored by</span>: {{ collectible.creator }}</li>
+                <li><span>Artist</span>: {{ collectible.artist }}</li>
+                <li><span>Publisher</span>: {{ collectible.publisher }}</li>
+                <li><span>Published (Year)</span>: {{ collectible.pubyear }}</li>
+                <li><span>Copyright</span>: {{ collectible.copyright }}</li>
+                <li><span>Serial Number</span>: {{ collectible.identifier }}</li>
+                <li><span>Entry created on</span>: {{ collectible.created }}</li>
+                <li><span>Entry updated on</span>: {{ collectible.modified }}</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
