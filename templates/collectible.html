@@ -31,8 +31,6 @@
             <h3 class="coll_header">{{ collectible.name }}</h3>
 
 
-
-
             {# Collectible description #}
             <section class="description">
             <p>{{ collectible.description }}</p>
@@ -49,6 +47,20 @@
                 <li><span>Entry created on</span>: {{ collectible.created }}</li>
                 <li><span>Entry updated on</span>: {{ collectible.modified }}</li>
             </ul>
-        </div>
+
+            <div id="coll_btn">
+                <button class="btn">Download</button><button class="btn">Weblink</button>
+            </div>
+
+            <div>
+                <h4 id="add_links">Additional Links:</h4>
+                <ul id="weblinks">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
+
+         </div>
     </section>
 {% endblock %}

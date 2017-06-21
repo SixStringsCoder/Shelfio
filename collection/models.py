@@ -1,6 +1,6 @@
 from django.db import models
 from datetime import datetime
-from django.contrib.auth.models import User
+from accounts.models import User
 from django.utils.text import slugify
 
 
@@ -8,8 +8,8 @@ from django.utils.text import slugify
 
 def collection_upload_handler(instance, filename) -> str:
     """
-    Handler to provide link to Collection and Collectible images
-    :return:
+    Handler to provide link to Collection images
+
     """
     username = instance.owner.username
     return f"{username}/{instance.name}/{filename}"
@@ -17,11 +17,11 @@ def collection_upload_handler(instance, filename) -> str:
 
 def collectible_upload_handler(instance, filename) -> str:
     """
-    Handler to provide link to Collection and Collectible images
-    :return:
+    Handler to provide link to Collectible images
+
     """
     username = instance.collection.owner.username
-    collection = instance.name
+    collection = instance.collection.name
     return f"{username}/{collection}/{filename}"
 
 
@@ -30,7 +30,7 @@ class Category(models.Model):
     Create categories and subcategories
 
     """
-    # TODO: make slugs unique for user.
+    # TODO: make slugs unique for each collectible entry by user (no duplicates)
 
     name = models.CharField(max_length=128)
     slug = models.SlugField(editable=False, blank=True, null=False)
@@ -86,13 +86,13 @@ class Collectible(models.Model):
     """
 
     collection = models.ForeignKey(Collection, related_name="items")
-    image = models.ImageField(upload_to=collectible_upload_handler, height_field=None, width_field=None, max_length=100)
+    image = models.ImageField(upload_to=collectible_upload_handler, height_field=None, width_field=None, max_length=200)
     name = models.CharField(max_length=256)
     description = models.TextField()
     creator = models.CharField(max_length=128)
     artist = models.CharField(max_length=128, blank=True, null=True)
     publisher = models.CharField(max_length=128, blank=True, null=True)
-    pubyear = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    pubyear = models.DateTimeField(blank=True, null=True)
     copyright = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     identifier = models.IntegerField(blank=True, null=True)
     classification = models.ManyToManyField(Category, related_name='collectibles')

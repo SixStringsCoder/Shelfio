@@ -6,17 +6,32 @@
    Collectible Form
 ----------------------*/
 
+/* Alter Bootstrap Styling for Django messages  */
+.messages {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 3em;
+}
+
+.alert-success {
+    color: #fff;
+    background-color: #E84B00;
+    border-color: #E84B00;
+}
 
 /*--------------------
    Collectible View
 ----------------------*/
 
+/* outer most container */
 #coll_container {
     display: flex;
     justify-content: center;
 }
 
 
+/* wallpaper for Collectible View */
 #collect_detail {
     display: flex;
     flex-direction: column;
@@ -29,26 +44,57 @@
     box-shadow: 1px 1px 2px black;
 }
 
+/* Header */
 .coll_header {
     color: #E84B00;
 }
 
-
+/* Header for List of Details */
 #specs_head {
     font-size: 1.3em;
     text-decoration: underline;
 }
 
+/* List Keys bolded */
 .coll_specs span {
     font-weight: bold;
 }
 
+/* colelctible description area*/
 .description {
     font-size: 1.3em;
     line-height: 200%;
 }
 
 
+/* Buttons for downloads and links*/
+#coll_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    margin: 20px 30px;
+    border-radius: 10px;
+}
+
+#add_links {
+    align-self: flex-end;
+}
+
+#weblinks {
+    margin: 0;
+    padding: 1px 20px 70px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#weblinks li a {
+    padding: 30px;
+}
 
 
 /*--------------------

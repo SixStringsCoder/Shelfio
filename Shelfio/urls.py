@@ -17,8 +17,18 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-
+from rest_framework import routers
+from accounts.api import UserViewSet
+from collection.api import CollectionViewSet, CollectibleViewSet
 from collection.views import home, base, contact, about
+import django
+
+# Routers provide an easy way of automatically determining the URL conf.
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'collections', CollectionViewSet)
+router.register(r'collectibles', CollectibleViewSet)
+
 
 urlpatterns = [
     # url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
@@ -27,12 +37,27 @@ urlpatterns = [
 
     # The Admin
     url(r'^admin/', admin.site.urls),
+
+    # Accounts
+    url(r'accounts', include('accounts.urls', namespace='accounts')),
+
+    # Wire up our API using automatic URL routing.
+    # Additionally, we include login URLs for the browsable API.
+    url(r'^api/v1/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
     url(r'^$', home, name='home'),
     url(r'^contact', contact, name='contact'),
     url(r'^about', about, name='about'),
 
-
     # Collection App
     url(r'^collections/', include('collection.urls')),
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Note below example is from Django 1.5
+#     urlpatterns += patterns('', url(r'^media/(?P<path>.*)$', django.views.static.serve, {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}))

@@ -67,11 +67,13 @@ main {
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 .full {
-    background: #FFDA00 url(/static/images/home_bg_img.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    /*background: #31b0d5 url(/static/images/home_bg_img.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*background-size: cover;*/
+    /*-o-background-size: cover;*/
+    background: #E8D500;
+
 }
 
 #heading_container {
@@ -87,7 +89,6 @@ main {
     justify-content: center;
     align-items: center;
     height: 90vh;
-
 }
 
 h1 {
@@ -95,7 +96,12 @@ h1 {
     font-size: 8em;
     padding-top: 40px;
     font-family: 'Days One', sans-serif;
-    /*text-shadow: 2px 3px #f6f6f6;*/
+    text-shadow: 1px 1px #fff;
+}
+
+#home_header {
+    border-bottom: 4px solid black;
+    padding: 0;
 }
 
 h3 {
@@ -104,12 +110,17 @@ h3 {
     font-family: 'Amaranth', sans-serif;
 }
 
-/*.text-vertical-center {*/
 
+/*.home_words_fx {*/
+    /*position: relative;*/
+    /*font-size: 3em;*/
+    /*color: #E8D500;*/
+    /*z-index: 10;*/
+/*}*/
 
-    /*display: table-cell;*/
-    /*text-align: center;*/
-    /*vertical-align: middle;*/
+/*.home_words_fx:hover {*/
+    /*color: #31b0d5;*/
+    /*transition: color .6s;*/
 /*}*/
 
 

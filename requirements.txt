@@ -1,0 +1,4 @@
+django
+djangorestframework
+markdown
+django-filterpip install django-filter

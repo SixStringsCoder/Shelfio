@@ -1,3 +1,39 @@
 /*
  Created on June 16th by Steve Hanlon.  CSS file for accounts app.
 */
+
+
+/*--------------------
+    Log in page
+----------------------*/
+#login_form {
+    width: 14%;
+    height: 65vh;
+    margin: 10px auto;
+    }
+
+
+
+
+
+
+/*--------------------
+    Registration page
+----------------------*/
+
+
+#reg_form {
+    width: 63%;
+    height: 65vh;
+    margin: 10px auto;
+    }
+
+
+#reg_form label {
+    font-size: 1.3em;
+}
+
+
+/*--------------------
+   Something else
+----------------------*/

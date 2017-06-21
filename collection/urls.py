@@ -13,11 +13,7 @@ urlpatterns = [
     # Collections
     # url(r'shelf/(?P<slug>\w+)/', collection, name='category'),     # detail / list
 
-    # Collectible
-    url(r'(?P<collectible_slug>[a-z0-9\-]+)/$', collectible, name='collectible_detail'),   # detail
-    # url(r'^shelf/create', collectible_form, name='collectible'),
-
+    # Collectible View, Form, and Edit
+    url(r'^collectible/create', collectible_form, name='collectible_form'),  # form
+    url(r'(?P<collectible_slug>[a-z0-9\-]+)/$', collectible, name='collectible_detail'), # detail
 ]
-
-
-# (?P<collection_slug>\w+)/

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'collection.apps.CollectionConfig',
     'accounts.apps.AccountsConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,8 @@ ROOT_URLCONF = 'Shelfio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),
+                 os.path.join(BASE_DIR, 'accounts', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,6 +84,9 @@ DATABASES = {
     }
 }
 
+
+# override the default user model by providing a custom user Model (https://docs.djangoproject.com/en/1.11/topics/auth/customizing/)
+AUTH_USER_MODEL = 'accounts.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -125,11 +130,18 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, "collection", "static"),
     os.path.join(BASE_DIR, "accounts", "static"),
-
-
 ]
 
 
 # uploaded Media files stored in user's media folder
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
