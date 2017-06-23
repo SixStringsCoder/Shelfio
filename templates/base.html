@@ -71,14 +71,14 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#">The Gallery</a>
+                            <a href="/{{ request.user }}/category">My Gallery</a>
                         </li>
                         <li>
-                            <a href="#">My Collections</a>
+                            <a href="/{{ request.user }}/collection/create/">New Collection</a>
                         </li>
 
                         <li>
-                            <a href="#">New Collection</a>
+                            <a href="/{{ request.user }}/collectible/create/">Add Collectible</a>
                         </li>
                         <li>
                             <a href="{% url "about" %}">About</a>

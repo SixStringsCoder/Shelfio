@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Collectible, Collection, Category
-from .forms import CollectibleModelForm, LinkModelForm
+from .forms import CollectionModelForm, CollectibleModelForm, LinkModelForm
 from django.utils import timezone
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -24,29 +24,61 @@ def base(request):
     return render(request, 'base.html')
 
 
-def category(request, slug):
+def category(request, username):
     """
     All of a user's Collections View
 
     """
 
-    category = Category.objects.get(slug=slug)
+    category = Category.objects.get()
     context = {'category': category}
     return render(request, 'collections.html', context)
 
 
-def collection(request, slug):
+
+@login_required  # Uses Django module to require login and disallow anonymous posting
+def collection_form(request, username):
+    """
+    Collection form view
+
+    """
+
+    if request.method == "GET":
+        form = CollectionModelForm()
+
+    elif request.method == "POST":
+        form = CollectionModelForm(data=request.POST, files=request.FILES)
+        if form.is_valid():
+            collection = form.save(commit=False) # no blank or invalid data submissions
+            # auto sets Collection "owner" to User account
+            collection.owner = request.user
+
+            # time stamp creation of collectible
+            collection.created = timezone.now()
+            # Add non-required additions to instance if needed
+            collection.save()
+            # Django Message module
+            messages.add_message(request, messages.SUCCESS, f'The Collection {collection.name} has been added successfully.')
+            return redirect(f'/collection/{collection.slug}/')
+
+
+    context = {'form': form}
+    return render(request, 'collection_form.html', context)
+
+
+def collection(request, username, collection_slug):
     """
     Collection Page Template View
 
     """
 
-    collection = Collection.objects.get(slug=slug)
+    collection = Collection.objects.get(slug=collection_slug)
     context = {'collection': collection}
     return render(request, 'collection.html', context)
 
 
-def collectible_form(request):
+@login_required  # Uses Django module to require login and disallow anonymous posting
+def collectible_form(request, username):
     """
     Collectible form View
 
@@ -64,8 +96,8 @@ def collectible_form(request):
             # Add non-required additions to instance if needed
             collectible.save()
             # Django Message module
-            messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been added successfully to {collection.name}.')
-            return redirect(f'/collections/{collectible.slug}/')
+            messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been added successfully.')
+            return redirect(f'collectible/{collectible.slug}/')
     # else:
     #     messages.add_message(request, messages.ERROR, f'{collectible.name} has been added successfully.')
     #     return redirect(f'/collections/{collectible.slug}/')
@@ -74,7 +106,7 @@ def collectible_form(request):
     return render(request, 'collectible_form.html', context)
 
 
-def collectible(request, collectible_slug):
+def collectible(request, username, collectible_slug):
     """
     A single collectible display view
 
@@ -85,14 +117,25 @@ def collectible(request, collectible_slug):
     return render(request, 'collectible.html', context)
 
 
-def collectible_edit(request, pk):
+def collectible_edit(request, username, collectible_slug):
     """
     A single collectible edit view
 
     """
+    collectible = Collectible.objects.get(slug=collectible_slug)  # Shows collectible details as editable fields
 
-    collectible = Collectible.objects.get(id=pk)
-    context = {'collectible': collectible}
+    form = CollectibleModelForm(instance=collectible, data=request.POST or None)
+    if form.is_valid():
+        collectible = form.save(commit=False)  # no blank or invalid data submissions
+        # # time stamp creation of collectible
+        # collectible.edited = timezone.now()
+        # Add non-required additions to instance if needed
+        collectible.save()
+        # Django Message module
+        messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been edited successfully.')
+        return redirect(f'collectible/{collectible.slug}/')
+
+    context = {'form': form}
     return render(request, 'collectible_edit.html', context)
 
 

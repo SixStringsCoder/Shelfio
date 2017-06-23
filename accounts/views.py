@@ -40,7 +40,6 @@ def logout(request):
     return redirect('/')
 
 
-# Create your views here.
 def register(request):
     """
     Registration rules and redirects

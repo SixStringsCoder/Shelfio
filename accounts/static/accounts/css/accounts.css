@@ -12,9 +12,19 @@
     margin: 10px auto;
     }
 
+/* Alter Bootstrap Styling for Django messages  */
+.messages {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 3em;
+}
 
-
-
+.alert-error {
+    color: #fff;
+    background-color: #E84B00;
+    border-color: #E84B00;
+}
 
 
 /*--------------------

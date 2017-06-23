@@ -21,7 +21,6 @@ from rest_framework import routers
 from accounts.api import UserViewSet
 from collection.api import CollectionViewSet, CollectibleViewSet
 from collection.views import home, base, contact, about
-import django
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -51,7 +50,7 @@ urlpatterns = [
     url(r'^about', about, name='about'),
 
     # Collection App
-    url(r'^collections/', include('collection.urls')),
+    url(r'^(?P<username>[a-z0-9_]+)/', include('collection.urls', namespace="collections")),
 
 ]
 

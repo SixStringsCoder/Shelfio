@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
 
     {%  block title %}
         <title>Collectible View</title>
     {% endblock %}
 
     {% block extra_head %}
-         <link rel="stylesheet" type="text/css" href="/static/collection/css/collection.css">
-
+         <link rel="stylesheet" type="text/css" href="{% static "collection/css/collection.css" %}">
     {% endblock %}
 
 
@@ -60,7 +60,17 @@
                 <li><a href="#">Link 3</a></li>
                 </ul>
             </div>
-
          </div>
     </section>
+
+    <aside id="collectible_btns">
+        <div>
+            {# TODO: change links to reverse link with template tags #}
+{#            {% url 'collectible_edit' 'collections:collectible_edit' collectible_slug=collectible.slug %}#}
+            <button id="edit_btn" class="btn"><a href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a></button>
+            <button id="addnew_btn" class="btn"><a href="/{{ request.user }}/collectible/create/">Add Another</a></button>
+            <button id="view_coll_btn" class="btn"><a href="/{{ request.user }}/collection/{{ collection.slug }}">View Collection</a></button>
+        </div>
+    </aside>
+
 {% endblock %}
