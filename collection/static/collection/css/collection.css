@@ -125,3 +125,22 @@
 /*--------------------
    Collectible Edit
 ----------------------*/
+
+
+
+
+/*-------------------------
+   Collection Gallery View
+---------------------------*/
+
+.collectible_gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*.collectible_gallery img{*/
+    /*width: 8%;*/
+    /*height: 10%;*/
+/*}*/

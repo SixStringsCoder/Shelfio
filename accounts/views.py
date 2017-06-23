@@ -5,6 +5,7 @@ from django.contrib.auth .forms import AuthenticationForm
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from django.contrib import messages
+from django.core.mail import send_mail
 
 def login(request):
     """
@@ -56,6 +57,14 @@ def register(request):
             # Add non-required additions to instance if needed
             user.save()
 
+            send_mail(
+                subject='You have a Shelfio account!',
+                message='Sign in and get organized!  Share your Collections with friends!',
+                from_email='rshanlon3@gmail.com',
+                recipient_list=[user.email],
+                fail_silently=False,
+            )
+
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
@@ -65,3 +74,6 @@ def register(request):
 
     context = {'form': form}
     return render(request, 'accounts/register.html', context)
+
+
+

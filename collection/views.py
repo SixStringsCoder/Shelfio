@@ -73,7 +73,8 @@ def collection(request, username, collection_slug):
     """
 
     collection = Collection.objects.get(slug=collection_slug)
-    context = {'collection': collection}
+    collectibles = collection.items.all()
+    context = {'collection': collection, 'collectibles': collectibles}
     return render(request, 'collection.html', context)
 
 

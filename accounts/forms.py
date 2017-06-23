@@ -6,11 +6,11 @@ from .models import User
 
 class CustomUserCreationForm(UserCreationForm):
     nickname = forms.RegexField(label=('Nickname'), max_length=256,
-                                regex = r'^[\w.@+\s]+$')
+                                regex = r'^[\w.@+\s]+$'),
 
     class Meta(UserCreationForm.Meta):
         model = User
-        fields = UserCreationForm.Meta.fields + ('nickname',)
+        fields = UserCreationForm.Meta.fields + ('nickname', 'email')
 
 
 # class CustomUserChangeForm(UserChangeForm):
