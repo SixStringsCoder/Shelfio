@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807aaae6-543b-422f-956c-38853823615e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shelfio/settings.py" afterPath="$PROJECT_DIR$/Shelfio/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/forms.py" afterPath="$PROJECT_DIR$/accounts/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/views.py" afterPath="$PROJECT_DIR$/accounts/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collection/static/collection/css/collection.css" afterPath="$PROJECT_DIR$/collection/static/collection/css/collection.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/collection/views.py" afterPath="$PROJECT_DIR$/collection/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/script.js" afterPath="$PROJECT_DIR$/static/js/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/collectible.html" afterPath="$PROJECT_DIR$/templates/collectible.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/collection.html" afterPath="$PROJECT_DIR$/templates/collection.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,72 +90,80 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collection/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="87" column="66" lean-forward="false" selection-start-line="87" selection-start-column="61" selection-end-line="87" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collectible.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/collectible.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collection.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/collection.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="61" column="70" lean-forward="true" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collection/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collection/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="75" column="41" lean-forward="true" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="collection.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collection/static/collection/css/collection.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="2" selection-end-line="145" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.6213355">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/base.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="486">
+                  <caret line="118" column="55" lean-forward="false" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="collectible.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templates/collectible.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="254">
+                  <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="collection.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/collection.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="269">
+                  <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#1728#1735#1#HTML" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="collection.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/collection/static/collection/css/collection.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="7">
+                  <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/static/js/script.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/collection/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1006">
+                  <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#0#45#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -189,6 +194,7 @@
       <find>coll_img</find>
       <find>shanlon</find>
       <find>Category</find>
+      <find>collect_detail</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -237,28 +243,36 @@
         <option value="$PROJECT_DIR$/templates/collections.html" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/collection/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/Shelfio/settings.py" />
         <option value="$PROJECT_DIR$/collection/views.py" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/collectible.html" />
-        <option value="$PROJECT_DIR$/templates/collection.html" />
         <option value="$PROJECT_DIR$/collection/static/collection/css/collection.css" />
+        <option value="$PROJECT_DIR$/static/js/script.js" />
+        <option value="$PROJECT_DIR$/templates/collection.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-6" />
     <option name="y" value="23" />
-    <option name="width" value="640" />
-    <option name="height" value="453" />
+    <option name="width" value="1440" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -348,6 +362,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Shelfio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shelfio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shelfio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -366,61 +394,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shelfio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shelfio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shelfio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shelfio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -677,16 +659,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="640" height="453" extended-state="6" />
+    <frame x="-6" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2751606" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7368421" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.300905" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.027350428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5521368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50501674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25736237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12160229" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="manage.py@Shelfio" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39079228" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19256382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -737,14 +719,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/accounts/static/accounts/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="64" lean-forward="false" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collectible/apps.py" />
     <entry file="file://$PROJECT_DIR$/static/vendor/jquery-ui.theme.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1009,28 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shelfio/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#641#682#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/collectible_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1055,14 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="19" column="60" lean-forward="true" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="72" column="60" lean-forward="false" selection-start-line="72" selection-start-column="60" selection-end-line="72" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1103,44 +1051,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collection/views.py">
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="75" column="41" lean-forward="true" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-2284">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shelfio/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/collection/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="304">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/collection/static/collection/css/collection.css">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="2" selection-end-line="145" selection-end-column="3" />
+        <state relative-caret-position="486">
+          <caret line="118" column="55" lean-forward="false" selection-start-line="118" selection-start-column="55" selection-end-line="118" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-906">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/collectible.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        <state relative-caret-position="254">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/static/collection/css/collection.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collection/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1006">
+          <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/collection.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="61" column="70" lean-forward="true" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
+        <state relative-caret-position="269">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#1728#1735#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>

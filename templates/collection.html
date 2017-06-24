@@ -12,34 +12,92 @@
     {% endblock %}
 
 
-    <section>
-        {# Collection Display Shelf #}
-        {% block content %}
+<section>
+    {# Collection Display Shelf #}
+    {% block content %}
 
-            <div class="container">
-                <div class="row">
-                    {# Collection heading #}
-                    <div class="col-lg-12">
-                        <h1 class="page-header">My {{ collection.name }} Collection</h1>
-                        <h3 class="page-header">Gallery View</h3>
+        <div class="container">
+            <div class="row">
+            {# Collection heading #}
+            <div class="col-lg-12">
+                <h1 class="page-header">My {{ collection.name }} Collection</h1>
+                <h3 class="page-header">Gallery View</h3>
+            </div>
+
+            {# FOR LOOP - Show all collectibles in Collection #}
+             {% for collectible in collectibles %}
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <div data-collectible="{{ forloop.counter }}" class="myBtn collectible_gallery">
+                        {# Link to Modal window of collectible details #}
+                        <img class="thumbnail img-responsive" alt="collectible_image" src="{{ collectible.image.url }}"/>
                     </div>
+                 </div>
 
-                    {# Show all collectibles in Collection #}
-                     {% for collectible in collectibles %}
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
 
-                            <item class="collectible_gallery">
-                                <a class="thumbnail" href="/{{ request.user }}/collectible/{{ collectible.slug }}">  {# Shows thumbnail of collectible #}
-                                    <img class="img-responsive" alt="collectible_image" src="{{ collectible.image.url }}" />  {# Link to collectible detail page #}
-                                </a>
-                            </item>
-                         </div>
-                    {% endfor %}
+               <!-------------------------------
+                ---------------------------------
+                        THE MODAL WINDOW
+                ---------------------------------
+                --------------------------------->
+                <div id="galleryModal_{{ forloop.counter }}" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content" id="collect_detail">
+                        <span class="close">&times;</span>
+                        <section id="coll_container">
 
-                </div> <!-- end .row-->
-            </div> <!-- end .container-->
-        {% endblock %}
-    </section>
+                            <div>
+                                {# Collection name #}
+                                <h5 class="coll_header_2">{{ collectible.collection }}</h5>
+
+                                {# Collectible Image and Name #}
+                                <figure class="coll_img">
+                                    <img src="{{ collectible.image.url }}">
+                                </figure>
+
+                                {# Collectible Heading #}
+                                <h3 class="coll_header">{{ collectible.name }}</h3>
+
+                                {# Collectible description #}
+                                <section class="description">
+                                <p>{{ collectible.description }}</p>
+                                </section>
+
+                                <hl id="specs_head"><strong>Details</strong></hl>
+                                <ul class="coll_specs">
+                                    <li><span>Manufactored by</span>: {{ collectible.creator }}</li>
+                                    <li><span>Artist</span>: {{ collectible.artist }}</li>
+                                    <li><span>Publisher</span>: {{ collectible.publisher }}</li>
+                                    <li><span>Published (Year)</span>: {{ collectible.pubyear }}</li>
+                                    <li><span>Copyright</span>: {{ collectible.copyright }}</li>
+                                    <li><span>Serial Number</span>: {{ collectible.identifier }}</li>
+                                    <li><span>Entry created on</span>: {{ collectible.created }}</li>
+                                    <li><span>Entry updated on</span>: {{ collectible.modified }}</li>
+                                </ul>
+
+                                <div id="coll_btn">
+                                    <button class="btn">Download</button><button class="btn">Weblink</button>
+                                </div>
+
+                                <div>
+                                    <h4 id="add_links">Additional Links:</h4>
+                                    <ul id="weblinks">
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    </ul>
+                                </div>
+                             </div>
+                        </section>
+                    </div>  <!-- end of .modal-content -->
+                </div> <!-- end of #myModal -->
+
+            {% endfor %}
+
+        </div> <!-- end .row-->
+    </div> <!-- end .container-->
+
+    {% endblock %}
+</section>
 
 
 

@@ -95,7 +95,7 @@
             <!-- /.container -->
         </nav>
 
-<!-- START MAIN AREA CONTENT-->
+    <!-- MAIN BODY AREA CONTENT-->
     <main>
         <section class="container">
             {# Middle Block Content #}
@@ -105,9 +105,8 @@
     </main>
 
         <!-- Footer -->
-
     {%  block content_footer %}
-        {% include 'footer.html'%}
+        {% include 'footer.html' %}
     {% endblock %}
 
 
@@ -117,6 +116,7 @@
     <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
     <script src="{% static "vendor/jquery-ui.min.js" %}"></script>
     <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     {% endblock %}
