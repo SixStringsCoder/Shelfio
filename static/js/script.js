@@ -10,8 +10,8 @@
 
 // Show the Modal window
 $('.myBtn').on('click', function() {
-    let somevar = $(this).attr("data-collectible");
-    $('#galleryModal_' + somevar).css('display', 'block');
+    let this_pic = $(this).attr("data-collectible");
+    $('#galleryModal_' + this_pic).css('display', 'block');
 });
 
 // Hide the modal window

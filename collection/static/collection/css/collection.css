@@ -51,7 +51,8 @@
 
 /* Collection Small Header */
 .coll_header_2 {
-    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-size: 2.5em;
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
@@ -64,8 +65,8 @@
 /* Collectible Image*/
 .coll_img img {
     background-size: contain;
-    width: 300px;
-    height: 400px;
+    width: 50%;
+    height: 50%;
     border-radius: 25px;
     border: 1px solid dimgray;
 }
@@ -134,7 +135,10 @@
 /* TODO: Make images uniform regardless of size imported */
 
 
-
+.collectible_gallery {
+    max-width: 80%;
+    height: auto;
+}
 
 
 /*-----------------------------
@@ -161,7 +165,7 @@
     display: flex;
     justify-content: center;
     /*background-color: #fefefe;*/
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 6% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Make it more or less, depending on screen size */
@@ -219,3 +223,19 @@
 }
 
 
+
+
+
+/* --------------------------
+-----------------------------
+        Media Queries
+-----------------------------
+--------------------------- */
+
+@media (max-width: 769px) {
+
+}
+
+@media (max-width: 569px) {
+
+}

@@ -1,13 +1,15 @@
 {# This is the registration and sign up page #}
 {% extends 'base.html' %}
 
+{% load static %}
+
 {%  block title %}
     <title>Log In (Shelfio)</title>
 {% endblock %}
 
 
 {% block extra_head %}
-     <link rel="stylesheet" type="text/css" href="/static/accounts/css/accounts.css">
+     <link rel="stylesheet" type="text/css" href="{%  static "accounts/css/accounts.css" %}">
 {% endblock %}
 
 
@@ -30,4 +32,8 @@
                 <button type="submit" class="save btn btn-default">Register</button>
             </form>
     </section>
+
+    <aside class="sign_up">
+        <h4>No account? <a href="/accounts/register">Sign up now!</a></h4>
+    </aside>
 {% endblock %}

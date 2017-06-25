@@ -1,0 +1,43 @@
+<!-- Bootstrap theme from https://startbootstrap.com/template-overviews/thumbnail-gallery/ -->
+
+{% extends 'base.html' %}
+
+    {%  block title %}
+    <title>All My Collections Gallery</title>
+    {% endblock %}
+
+    {% load static %}
+    {%  block extra_head %}
+            <link rel="stylesheet" href="{% static "collection/css/collection.css" %}">
+    {% endblock %}
+
+
+<section>
+    {# Collection Display Shelf #}
+    {% block content %}
+
+        <div class="container">
+            <div class="row">
+
+                {# Collection heading #}
+                <div class="col-lg-12">
+                    <h1 class="page-header">Collections of {{ collection.owner }}</h1>
+                    <h3 class="page-header">Gallery View</h3>
+                </div>
+
+                {# FOR LOOP - Show all collectibles in Collection #}
+                {% for collection in collections %}
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <div data-collectible="{{ forloop.counter }}" class="myBtn collectible_gallery">
+                            {# Link to Modal window of collectible details #}
+                            <img class="thumbnail img-responsive" alt="collectible_image"
+                                 src="{{ collection.image.url }}"/>
+                        </div>
+                    </div>
+                {% endfor %}  <!-- end FOR LOOP-->
+            </div> <!-- end #row-->
+        </div> <!-- end .container-->
+    {% endblock %}
+
+</section>
+

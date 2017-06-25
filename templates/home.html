@@ -60,24 +60,28 @@
                 </button>
                 <a class="navbar-brand" href="#">Shelfio</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <!-- View All User's Collections -->
                     <li>
-                        <a href="#">The Gallery</a>
+                        <a href="/{{ request.user }}/category">My Gallery</a>
+                    </li>
+                    <!-- View Collection create Form -->
+                    <li>
+                        <a href="/{{ request.user }}/collection/create/">New Collection</a>
+                    </li>
+                    <!-- View Collectible create Form -->
+                    <li>
+                        <a href="/{{ request.user }}/collectible/create/">Add Collectible</a>
                     </li>
                     <li>
-                        <a href="#">My Collections</a>
-                    </li>
-
-                    <li>
-                        <a href="#">New Collection</a>
+                        <a href="{% url "about" %}">About</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="{% url "contact" %}">Contact</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="/accounts/login">Log In</a>
                     </li>
                 </ul>
             </div>

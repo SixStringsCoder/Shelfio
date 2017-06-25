@@ -30,9 +30,10 @@ def category(request, username):
 
     """
 
-    category = Category.objects.get()
-    context = {'category': category}
-    return render(request, 'collections.html', context)
+    collections = User.objects.get()
+    collections = owner.category.all()
+    context = {'category': category, 'collections': collections}
+    return render(request, 'collection/collections.html', context)
 
 
 
@@ -63,7 +64,7 @@ def collection_form(request, username):
 
 
     context = {'form': form}
-    return render(request, 'collection_form.html', context)
+    return render(request, 'collection/collection_form.html', context)
 
 
 def collection(request, username, collection_slug):
@@ -75,7 +76,7 @@ def collection(request, username, collection_slug):
     collection = Collection.objects.get(slug=collection_slug)
     collectibles = collection.items.all()
     context = {'collection': collection, 'collectibles': collectibles}
-    return render(request, 'collection.html', context)
+    return render(request, 'collection/collection.html', context)
 
 
 @login_required  # Uses Django module to require login and disallow anonymous posting
@@ -104,7 +105,7 @@ def collectible_form(request, username):
     #     return redirect(f'/collections/{collectible.slug}/')
 
     context = {'form': form}
-    return render(request, 'collectible_form.html', context)
+    return render(request, 'collection/collectible_form.html', context)
 
 
 def collectible(request, username, collectible_slug):
@@ -115,7 +116,7 @@ def collectible(request, username, collectible_slug):
 
     collectible = Collectible.objects.get(slug=collectible_slug)
     context = {'collectible': collectible}
-    return render(request, 'collectible.html', context)
+    return render(request, 'collection/collectible.html', context)
 
 
 def collectible_edit(request, username, collectible_slug):
@@ -137,7 +138,7 @@ def collectible_edit(request, username, collectible_slug):
         return redirect(f'collectible/{collectible.slug}/')
 
     context = {'form': form}
-    return render(request, 'collectible_edit.html', context)
+    return render(request, 'collection/collectible_edit.html', context)
 
 
 def contact(request):

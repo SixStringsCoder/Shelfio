@@ -8,7 +8,26 @@
 Home Page for Shelfio Web Application - created June 17, 2017 by Steve Hanlon
 */
 
+/*--------------------
+     BASE STYLES
+----------------------*/
 
+a {
+    color: #0D5FFA;
+}
+
+a:hover {
+    color: #E8004F;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+label {
+    display: flex;
+    font-size: 1.3em;
+}
 
 /*--------------------
         NAV BAR
@@ -53,6 +72,7 @@ Home Page for Shelfio Web Application - created June 17, 2017 by Steve Hanlon
 
 /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 body {
+
     margin-top: 50px;
     background-color: transparent;
 }
@@ -108,28 +128,16 @@ h3 {
     color: #101010;
     font-size: 4em;
     font-family: 'Amaranth', sans-serif;
+    margin: 10px 0 30px;
 }
-
-
-/*.home_words_fx {*/
-    /*position: relative;*/
-    /*font-size: 3em;*/
-    /*color: #E8D500;*/
-    /*z-index: 10;*/
-/*}*/
-
-/*.home_words_fx:hover {*/
-    /*color: #31b0d5;*/
-    /*transition: color .6s;*/
-/*}*/
-
 
 /* BUTTON */
 .btn {
 	font-size:20px;
 	background-color:#E84B00;
 	padding: 20px 60px;
-	color:#fff;
+	color: #fff;
+    border: 1px solid black;
 	border-radius: 2px;
     transition: background-color .6s;
 }
@@ -151,6 +159,13 @@ h3 {
 }
 
 
+/* Bootstrap buttons selectors */
+.btn-default:hover {
+    color: #333;
+    background-color: #31b0d5;
+    border: 1px solid black;
+}
+
 
 /*--------------------
         FOOTER
@@ -170,3 +185,38 @@ footer {
 
 
 
+
+
+/* --------------------------
+-----------------------------
+        Media Queries
+-----------------------------
+--------------------------- */
+/* Medium Size Screens */
+@media (max-width: 769px) {
+    h1 {
+    font-size: 5em;
+    padding-top: 40px;
+    }
+
+    #home_header {
+        border-bottom: 4px solid black;
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 3em;
+        margin: 10px 0 30px;
+    }
+
+    }
+
+
+/* Small Screens */
+@media (max-width: 569px) {
+    h1 {
+    font-size: 4em;
+    padding-top: 40px;
+    }
+
+}

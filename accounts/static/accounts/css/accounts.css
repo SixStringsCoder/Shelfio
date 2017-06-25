@@ -45,5 +45,10 @@
 
 
 /*--------------------
-   Something else
+   Log In page
 ----------------------*/
+
+.sign_up {
+    display: flex;
+    justify-content: flex-end;
+}
