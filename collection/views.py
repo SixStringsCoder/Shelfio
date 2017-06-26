@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Collectible, Collection, Category
+from .models import Collectible, Collection, Category, User
 from .forms import CollectionModelForm, CollectibleModelForm, LinkModelForm
 from django.utils import timezone
 from django.contrib import messages
@@ -30,11 +30,21 @@ def category(request, username):
 
     """
 
-    collections = User.objects.get()
-    collections = owner.category.all()
-    context = {'category': category, 'collections': collections}
+    context = {'category': category}
     return render(request, 'collection/collections.html', context)
 
+
+
+def collections(request, username):
+    """
+    All of a user's Collections View
+
+    """
+
+    collections = Collection.objects.get()
+    collection = category.collections.all()
+    context = {'category': category, 'collections': collections}
+    return render(request, 'collection/collections.html', context)
 
 
 @login_required  # Uses Django module to require login and disallow anonymous posting

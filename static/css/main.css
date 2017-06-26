@@ -13,11 +13,12 @@ Home Page for Shelfio Web Application - created June 17, 2017 by Steve Hanlon
 ----------------------*/
 
 a {
-    color: #0D5FFA;
+    /*color: #0D5FFA;*/
+    color: #f7f7f7;
 }
 
 a:hover {
-    color: #E8004F;
+    color: #0D5FFA;
 }
 
 input {
@@ -80,9 +81,9 @@ body {
 /* base.html yellow BG */
 main {
     background-color: #FFDA00;
-    height: 100%;
+    height: auto;
     padding-top: 4%;
-    padding-bottom: 3%;
+    padding-bottom: 14%;
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
@@ -114,7 +115,7 @@ main {
 h1 {
     color: #101010;
     font-size: 8em;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
     font-family: 'Days One', sans-serif;
     text-shadow: 1px 1px #fff;
 }

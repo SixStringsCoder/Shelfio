@@ -6,14 +6,14 @@ class CollectionModelForm(forms.ModelForm):
     class Meta:
         model = Collection
         fields = ('status', 'name', 'type',
-                  'categories',)
+                  'image', 'categories',)
 
 
 class CollectibleModelForm(forms.ModelForm):
     class Meta:
         model = Collectible
         fields = ('collection', 'image', 'name', 'description',
-                  'artist', 'publisher', 'identifier',)
+                  'creator', 'artist', 'publisher', 'identifier',)
 
 
 class LinkModelForm(forms.ModelForm):

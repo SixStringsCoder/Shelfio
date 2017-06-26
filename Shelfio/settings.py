@@ -146,22 +146,22 @@ REST_FRAMEWORK = {
     ]
 }
 
-#  Django Email Outgoing settings (https://docs.djangoproject.com/en/1.11/topics/email/)
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-# os environemnt variable for protecting user anme
-EMAIL_HOST_USER = os.environ['GMAIL_USERNAME']
-# Configuring/ referencing os environment variable for protecting p/w
-EMAIL_HOST_PASSWORD = os.environ['GMAIL_PASSWORD']
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-DEFAULT_FROM_EMAIL = 'rshanlon3@gmail.com'
-
-#  Email admin about server problem
-ADMINS = [('Steve', 'rshanlon3@gmail.com'),]
-
-#  Email BACKEND Success shows in Console
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# #  Django Email Outgoing settings (https://docs.djangoproject.com/en/1.11/topics/email/)
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# # os environemnt variable for protecting user anme
+# EMAIL_HOST_USER = 'rshanlon3'
+# # Configuring/ referencing os environment variable for protecting p/w
+# EMAIL_HOST_PASSWORD = os.environ['GMAIL_PASSWORD']
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+# DEFAULT_FROM_EMAIL = 'rshanlon3@gmail.com'
+#
+# #  Email admin about server problem
+# ADMINS = [('Steve', 'rshanlon3@gmail.com'),]
+#
+# #  Email BACKEND Success shows in Console
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #  Variation using Console and Email
 # if DEBUG:

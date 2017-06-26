@@ -48,6 +48,7 @@ class Category(models.Model):
         verbose_name_plural = "Categories"  # fixes Admin spelling of Categorys to Categories
 
 
+
 class Collection(models.Model):
     """
     Defines a Collection table
@@ -96,7 +97,7 @@ class Collectible(models.Model):
     artist = models.CharField(max_length=128, blank=True, null=True)
     publisher = models.CharField(max_length=128, blank=True, null=True)
     pubyear = models.DateTimeField(blank=True, null=True)
-    copyright = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    copyright = models.DateTimeField(blank=True, null=True)
     identifier = models.IntegerField(blank=True, null=True)
     classification = models.ManyToManyField(Category, related_name='collectibles')
     created = models.DateTimeField(auto_now=True)
