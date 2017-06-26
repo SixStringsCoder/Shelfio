@@ -2,15 +2,28 @@
  Created on June 16th by Steve Hanlon.  CSS file for accounts app.
 */
 
+/*--------------------
+       FORM
+----------------------*/
+.container {
+    border-bottom: 1px solid black;
+}
+
+
 
 /*--------------------
     Log in page
 ----------------------*/
+
+form {
+    margin-bottom: 200px;
+}
+
 #login_form {
-    width: 14%;
-    height: 65vh;
-    margin: 10px auto;
-    }
+    width: 15%;
+    /*height: 65vh;*/
+    margin: 30px auto;
+}
 
 /* Alter Bootstrap Styling for Django messages  */
 .messages {

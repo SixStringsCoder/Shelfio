@@ -1,12 +1,12 @@
 from django.conf.urls import url
 from .views import (collection, collectible_form, collectible,
-                    collectible_edit, collection_form, category)
+                    collectible_edit, collection_form, category, collections)
 
 
 urlpatterns = [
     # All of User's Collections View
     # TODO: Change Category to Gallery or Collections
-    url(r'category/', category, name='collections_gallery'),  # view
+    url(r'collections/', collections, name='collections_gallery'),  # view
 
 
     # Collections Form, View

@@ -144,6 +144,27 @@
 }
 
 
+
+/*-------------------------------
+   Collections User Gallery View
+---------------------------------*/
+
+/* container around images */
+.collections_gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* individual images */
+.collections_gallery img {
+    max-width: 275px;
+    height: 150px;
+    border-radius: 15px;
+    margin-top: 35px;
+
+}
+
+
 /*-----------------------------
    MODAL WINDOW DETAIL POP-UP
 -------------------------------*/
@@ -234,7 +255,7 @@
 
 @keyframes zoomOut {
     from {transform:scale(1)}
-    to {-transform:scale(0)}
+    to {transform:scale(0)}
 }
 
 

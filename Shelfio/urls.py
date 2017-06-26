@@ -51,7 +51,6 @@ urlpatterns = [
 
     # Collection App
     url(r'^(?P<username>[a-z0-9_]+)/', include('collection.urls', namespace="collections")),
-
 ]
 
 if settings.DEBUG:
