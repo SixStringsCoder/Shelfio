@@ -1,7 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-# Create your models here.
+
+def profile_upload_handler(instance, filename) -> str:
+    """
+    Handler to provide link to User profile image
+
+    """
+    username = instance.owner.username
+    return f"{username}/{instance.name}/{filename}"
+
+
 
 class User(AbstractUser):
     """
@@ -14,5 +23,7 @@ class User(AbstractUser):
 
     """
     nickname = models.CharField(max_length=256)
+    image = models.ImageField(upload_to=profile_upload_handler),
+
 
     REQUIRED_FIELDS = ['nickname', 'email']

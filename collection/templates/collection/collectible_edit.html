@@ -21,9 +21,48 @@
                 <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
                  a form on the actual website.  Makes sure cookie is set on your browser-->
                 {% csrf_token %}
-                <!-- inserts form as paragraphs -->
+            {{ link_formset.management_form }}
+                <!-- UPDATES form as paragraphs -->
                 {{ form.as_p }}
+
+                <!-- Link Names and URLs -->
+            <h4>Web or File Links</h4>
+            {% for link_form in link_formset %}
+                <div class="link-formset">
+                    <label>Name</label>
+                    {{ link_form.name }}
+                    {% if link_form.name.errors %}
+                        {% for error in link_form.name.errors %}
+                            {{ error|escape }}
+                        {% endfor %}
+                    {% endif %}
+
+                    {{ link_form.url }}
+                    {% if link_form.url.errors %}
+                        {% for error in link_form.url.errors %}
+                            {{ error|escape }}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            {% if link_formset.non_form_errors %}
+                {% for error in link_formset.non_form_errors %}
+                    {{ error|escape }}
+                {% endfor %}
+            {% endif %}
+
+            <div>
                 <button type="submit" class="save btn btn-default">Save</button>
+            </div>
             </form>
     </section>
+{% endblock %}
+
+
+{%  block extra_end %}
+<!-- Include formset plugin - including jQuery dependency -->
+<script src="{% static 'collection/vendor/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'collection/vendor/jquery.formset.js' %}"></script>
+<script src="{% static 'collection/js/collection.js' %}"></script>
 {% endblock %}

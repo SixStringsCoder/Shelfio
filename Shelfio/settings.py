@@ -88,6 +88,9 @@ DATABASES = {
 # override the default user model by providing a custom user Model (https://docs.djangoproject.com/en/1.11/topics/auth/customizing/)
 AUTH_USER_MODEL = 'accounts.User'
 
+# Redirect URL where requests go after login
+LOGIN_REDIRECT_URL = '/collections/'
+LOGOUT_REDIRECT_URL = '/'
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 

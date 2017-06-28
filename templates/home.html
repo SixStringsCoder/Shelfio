@@ -47,7 +47,23 @@
 </head>
 
 <body>
-    <!-- Navigation -->
+
+{#    <!-- Navigation RIFF-->#}
+{#    #}
+{#    {% if request.user.is_authenticated %}#}
+{##}
+{#       Hello, {{ request.user }}#}
+{#        <a>Logout</a>#}
+{##}
+{#    {% else %}#}
+{#        <a>Register/a>#}
+{#        <a>LogIn</a>#}
+{##}
+{#    {% endif %}#}
+
+
+
+    {#  Navigation Bar  #}
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->

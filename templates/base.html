@@ -115,15 +115,17 @@
 
     <!-- jQuery -->
     {% load static %}
-    {%  block extra_end %}
     <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
     <script src="{% static "vendor/jquery-ui.min.js" %}"></script>
     <script src="{% static "js/jquery.js" %}"></script>
     <script src="{% static "js/script.js" %}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+    {%  block extra_end %}
     {% endblock %}
-    <!-- JS Test Area -->
+
+    <!-- DANGER: JS Test Area -->
     <script></script>
 
 </body>

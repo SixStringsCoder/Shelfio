@@ -1,11 +1,14 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
 from django.contrib.auth import login as django_logout
-from django.contrib.auth .forms import AuthenticationForm
+from django.contrib.auth .forms import AuthenticationForm, PasswordChangeForm
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from django.contrib import messages
 from django.core.mail import send_mail
+from django.contrib.auth.decorators import login_required
+from Shelfio.settings import LOGOUT_REDIRECT_URL
+
 
 def login(request):
     """
@@ -34,11 +37,11 @@ def login(request):
 
 def logout(request):
     """
-        Logout redirect
+    Logout redirect
 
     """
     django_logout(request)
-    return redirect('/')
+    return redirect()
 
 
 def register(request):
@@ -76,4 +79,15 @@ def register(request):
     return render(request, 'accounts/register.html', context)
 
 
+@login_required()
+def profile(request):
+    """
+    Update user profile information
 
+    """
+
+    form = CustomUserUpdateForm(instance=request.user)
+    password_form = PasswordChangeForm(user=request.user)
+
+    context = {'form': form, 'password_form': password_form}
+    return render(request, 'accounts/profile.html', context)

@@ -48,24 +48,18 @@
                 <li><span>Entry updated on</span>: {{ collectible.modified }}</li>
             </ul>
 
-            <div id="coll_btn">
-                <button class="btn">Download</button><button class="btn">Weblink</button>
-            </div>
-
-            <div>
+            <div class="additional_links_area">
                 <h4 id="add_links">Additional Links:</h4>
-                <ul id="weblinks">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                </ul>
+                    <div class="coll_links_area">
+                        {% for link in collectible.links.all %}
+                            <a class="btn_small" href="{{ link.url }}">{{ link.name }}</a>
+                        {% endfor %}
+                    </div>
             </div>
-         </div>
     </section>
 
-    <aside id="collectible_btns">
+    <aside id="collectible_option_btns">
         <div>
-            {# TODO: change links to reverse link with template tags #}
             <button id="edit_btn" class="btn"><a href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a></button>
             <button id="addnew_btn" class="btn"><a href="/{{ request.user }}/collectible/create/">Add Another</a></button>
             <button id="view_coll_btn" class="btn"><a href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a></button>

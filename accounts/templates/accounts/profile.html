@@ -1,0 +1,50 @@
+{# This is the user profile page - used for updating  #}
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{%  block title %}
+    <title>User Profile (Shelfio)</title>
+{% endblock %}
+
+
+{% block extra_head %}
+     <link rel="stylesheet" type="text/css" href="{%  static "accounts/css/accounts.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- FORM ERROR MSG-->
+    <div>{{ form.errors }}</div>
+    <!-- PASSWORD ERROR MSG-->
+    <div>{{ passwordform.errors }}</div>
+
+    <section id="profile_form">
+        <h3>Update Profile</h3>
+
+            <!-- PROFILE FORM -->
+            <!-- enctype encrypts image file to be stored in database -->
+            <form action="" method="POST" enctype="multipart/form-data">
+                <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
+                 a form on the actual website.  Makes sure a cookie is set on your browser -->
+                {% csrf_token %}
+                <!-- inserts form as paragraphs -->
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+
+            <!-- CHANGE PASSWORD FORM -->
+        <h3>Update Password</h3>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
+                 a form on the actual website.  Makes sure a cookie is set on your browser -->
+                {% csrf_token %}
+                <!-- inserts form as paragraphs -->
+                {{ password_form.as_p }}
+                <button type="submit" class="save btn btn-default">Update</button>
+            </form>
+    </section>
+
+
+{% endblock %}

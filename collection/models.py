@@ -4,6 +4,7 @@ from accounts.models import User
 from django.utils.text import slugify
 
 
+
     # TODO: add a Priority Field to help user organize a Collection
 
 def collection_upload_handler(instance, filename) -> str:
@@ -121,9 +122,9 @@ class Link(models.Model):
     """
 
     name = models.CharField(max_length=256)
-    link = models.FileField(null=True, blank=True)
+    url = models.URLField()
     collectible = models.ForeignKey(Collectible, related_name="links")
-    slug = models.SlugField(editable=False, blank=True, null=False)
+    slug = models.SlugField(editable=False, blank=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)

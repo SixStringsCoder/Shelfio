@@ -74,19 +74,16 @@
                                     <li><span>Entry updated on</span>: {{ collectible.modified }}</li>
                                 </ul>
 
-                                <div id="coll_btn">
-                                    <button class="btn">Download</button><button class="btn">Weblink</button>
+                                <div class="additional_links_area">
+                                <h4 id="add_links">Additional Links:</h4>
+                                    <div class="coll_links_area">
+                                        {% for link in collectible.links.all %}
+                                            <a class="btn_small" href="{{ link.url }}">{{ link.name }}</a>
+                                        {% endfor %}
+{#                                        <input type="button" onclick="window.location='{{ link_form.url }}';_gaq.push(['_trackEvent', 'Downloads', 'eBooks', 'Burmese Monks Tales PDF']);" name="Add" value="{{ link_form.name }}" class="btn">#}
+                                    </div>
                                 </div>
-
-                                <div>
-                                    <h4 id="add_links">Additional Links:</h4>
-                                    <ul id="weblinks">
-                                    <li><a href="#">Link 1</a></li>
-                                    <li><a href="#">Link 2</a></li>
-                                    <li><a href="#">Link 3</a></li>
-                                    </ul>
-                                </div>
-                             </div>
+                            </div>
                         </section>
                     </div>  <!-- end of .modal-content -->
                 </div> <!-- end of #myModal -->
@@ -98,72 +95,3 @@
 
     {% endblock %}
 </section>
-
-
-
-
-
-
-<!-- ORIGINAL CODE REFERENCE STORAGE -->
-
-{##}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
-{#                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">#}
-{#                        <a class="thumbnail" href="#">#}
-{#                            <img class="img-responsive" src="http://placehold.it/400x300" alt="">#}
-{#                        </a>#}
-{#                    </div>#}
