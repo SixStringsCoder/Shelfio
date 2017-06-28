@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from .views import (collection, collectible_form, collectible,
-                    collectible_edit, collection_form, category, collections)
+from .views import (collection, collectible_form, collectible, collectible_edit,
+                    collection_form, category, collections, collection_embed)
 
 
 urlpatterns = [
@@ -9,9 +9,10 @@ urlpatterns = [
     url(r'collections/', collections, name='collections_gallery'),  # view
 
 
-    # Collections Form, View
+    # Collections Form, View, Embed View
     url(r'^collection/create/$', collection_form, name='collection_form'),   # form
     url(r'collection/(?P<collection_slug>[a-z0-9\-]+)/', collection, name='collection_detail'),  # view
+    url(r'collection_embed/(?P<collection_slug>[a-z0-9\-]+)/', collection_embed, name='collection_embed'), # embed view - less styling
 
 
     # Collectible View, Form, and Edit

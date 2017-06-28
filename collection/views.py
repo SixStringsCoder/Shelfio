@@ -79,6 +79,18 @@ def collection_form(request, username):
     return render(request, 'collection/collection_form.html', context)
 
 
+def collection_embed(request, username, collection_slug):
+    """
+    Collection Page Template View for Embeddding
+
+    """
+
+    collection = Collection.objects.get(slug=collection_slug)
+    collectibles = collection.items.all()
+    context = {'collection': collection, 'collectibles': collectibles}
+    return render(request, 'collection/collection_embed.html', context)
+
+
 def collection(request, username, collection_slug):
     """
     Collection Page Template View

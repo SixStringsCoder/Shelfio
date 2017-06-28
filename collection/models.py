@@ -83,6 +83,12 @@ class Collection(models.Model):
     def __str__(self):
         return self.name
 
+    def make_embed(self):
+        #TODO: Deploy
+        skeleton = fr'<iframe src="/{self.owner.username}/collection/{self.slug}" style="height:1000px; width:100%;" frameborder="0" scrolling="no" overflow="hidden"></iframe>'
+
+        return skeleton
+
 
 class Collectible(models.Model):
     """

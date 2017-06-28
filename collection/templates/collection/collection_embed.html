@@ -1,16 +1,30 @@
 <!-- Bootstrap theme from https://startbootstrap.com/template-overviews/thumbnail-gallery/ -->
 
-{% extends 'base.html' %}
+{#{% extends 'base.html' %}#}
 
-    {%  block title %}
+{#{%  block title %}#}
+{#    {% endblock %}#}
+{##}
+{# {%  block extra_head %}#}
+{#    {% endblock %}#}
+
+
     <title>Collection Gallery</title>
-    {% endblock %}
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Amaranth|Chau+Philomene+One|Days+One|Paytone+One" rel="stylesheet">
 
     {% load static %}
-    {%  block extra_head %}
-            <link rel="stylesheet" href="{% static "collection/css/collection.css" %}">
-    {% endblock %}
 
+        <!-- jQuery UI CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static "vendor/jquery-ui.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "vendor/jquery-ui.structure.min.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "vendor/jquery-ui.theme.min.css" %}">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+        <link rel="stylesheet" href="{% static "collection/css/collection.css" %}">
 
 <section>
     {# Collection Display Shelf #}
@@ -44,8 +58,8 @@
                     <!-- Modal content -->
                     <div class="modal-content" id="collect_detail">
                         <span class="close">&times;</span>
-
                         <section id="coll_container">
+
                             <div>
                                 {# Collection name #}
                                 <h5 class="coll_header_2">{{ collectible.collection }}</h5>
@@ -79,7 +93,7 @@
                                 <h4 id="add_links">Additional Links:</h4>
                                     <div class="coll_links_area">
                                         {% for link in collectible.links.all %}
-                                            {# to solve spaces in URLs us regex (?P<name>[\w\ ]+) #}
+                                            {# to solve spaces in URLs use this regex (?P<name>[\w\ ]+) #}
                                             <a class="btn_small" href="{{ link.url }}">{{ link.name }}</a>
                                         {% endfor %}
                                             <!-- input button as PDF download -->
@@ -99,22 +113,24 @@
                         </aside>
 
                     </div>  <!-- end of .modal-content -->
-                </div> <!-- end of .modal -->
+                </div> <!-- end of #myModal -->
 
             {% endfor %}  <!-- end FOR LOOP-->
 
         </div> <!-- end .row-->
     </div> <!-- end .container-->
 
-        <!-- Reveals Embed Code-->
-        <aside class="embed_code_btn_pos">
-              <button class="embed_code_btn btn btn-default">Get Embed Code</button>
-        </aside>
-        <!-- Embed Code in input text field-->
-        <div class="iframe-wrapper embed_code_field">
-        {% autoescape off %}
-               <input id="embed_code_textfield" type="text" value='{{ collection.make_embed }}' >
-        {% endautoescape %}
-        </div>
+
+
     {% endblock %}
 </section>
+
+
+    <!-- JS, jQuery, Bootstrap JS -->
+
+    <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "vendor/jquery-ui.min.js" %}"></script>
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>

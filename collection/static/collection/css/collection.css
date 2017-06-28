@@ -153,7 +153,31 @@
     height: auto;
 }
 
+.embed_code_btn_pos {
+    display: flex;
+    justify-content: center;
+}
 
+.embed_code_field {
+    display: none;
+}
+
+#embed_code_textfield {
+    width: 100%;
+    border: 5px solid white;
+    -webkit-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    -moz-box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    box-shadow:
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1);
+    padding: 15px;
+    background: #FF9D00;
+    margin: 0 0 10px 30px;
+}
 
 /*-------------------------------
    Collections User Gallery View
@@ -171,7 +195,6 @@
     height: 150px;
     border-radius: 15px;
     margin-top: 35px;
-
 }
 
 
@@ -215,8 +238,8 @@
 /* Collectible Image*/
 .img_modal {
     background-size: contain;
-    width: 30%;
-    height: 30%;
+    width: auto;
+    height: auto;
     border-radius: 5px;
     box-shadow: 1px 0 2px grey;
 }

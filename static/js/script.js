@@ -11,10 +11,23 @@
 // Show the Modal window
 $('.myBtn').on('click', function() {
     let this_pic = $(this).attr("data-collectible");
-    $('#galleryModal_' + this_pic).css('display', 'block');
+    $('#galleryModal_' + this_pic).show('slow');
 });
 
 // Hide the modal window
 $('.close').on('click', function() {
-    $('.modal').css('display','none');
+    $('.modal').hide('slow');
+});
+
+
+
+
+/*---------------------------
+        EMBED CODE
+-----------------------------*/
+
+// Show the Embed Code input text field
+$('.embed_code_btn').click(function() {
+    console.log('It worked!');
+   $('.embed_code_field').show('slow');
 });
