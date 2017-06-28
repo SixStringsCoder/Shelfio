@@ -35,11 +35,20 @@ label {
         NAV BAR
 ----------------------*/
 
+/*.navbar-logo {*/
+    /*float: left;*/
+    /*height: 50px;*/
+    /*padding: 1px 20px;*/
+    /*font-size: 18px;*/
+    /*line-height: 20px;*/
+/*}*/
+
+
 .navbar {
     background-color: #101010;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-family: 'Alegreya Sans SC', sans-serif;
-    padding: 6px;
+    padding: 12px;
     box-shadow: 2px 0 5px black;
 }
 
@@ -133,6 +142,13 @@ h3 {
     margin: 10px 0 30px;
 }
 
+h4 {
+    color: #101010;
+    font-size: 2em;
+    font-family: 'Amaranth', sans-serif;
+    margin: 10px 0 30px;
+}
+
 /* BUTTON */
 .btn {
 	font-size: 20px;
@@ -153,7 +169,12 @@ h3 {
 	color: #fff;
     border: 1px solid black;
 	border-radius: 10px;
-    transition: background-color .6s;
+    transition: background-color .4s;
+}
+
+.btn_small:hover {
+    background-color: #31b0d5;
+	color: #000;
 }
 
 

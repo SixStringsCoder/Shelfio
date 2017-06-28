@@ -72,6 +72,9 @@
     display: flex;
     justify-content: center;
     border-radius: 5px;
+}
+
+.coll_img img {
     box-shadow: 0 0 15px #2b2b2b;
 }
 

@@ -29,8 +29,9 @@
             <h4>Web or File Links</h4>
             {% for link_form in link_formset %}
                 <div class="link-formset">
-                    <label>Name</label>
+                    <label>Name and URL</label>
                     {{ link_form.name }}
+                    {{ link_form.id }}  {# Corrected id=0 errors #}
                     {% if link_form.name.errors %}
                         {% for error in link_form.name.errors %}
                             {{ error|escape }}
