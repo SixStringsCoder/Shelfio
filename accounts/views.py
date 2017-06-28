@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
-from django.contrib.auth import login as django_logout
+from django.contrib.auth import logout as django_logout
 from django.contrib.auth .forms import AuthenticationForm, PasswordChangeForm
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, CustomUserUpdateForm

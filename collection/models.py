@@ -122,7 +122,7 @@ class Link(models.Model):
     """
 
     name = models.CharField(max_length=256)
-    url = models.URLField()
+    url = models.URLField(max_length=500)
     collectible = models.ForeignKey(Collectible, related_name="links")
     slug = models.SlugField(editable=False, blank=True)
 

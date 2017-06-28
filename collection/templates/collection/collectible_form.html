@@ -29,14 +29,11 @@
             <!-- Link Names and URLs -->
             <h4>Web or File Links</h4>
 
-{#            {{  link_formset }}#}
-
             {% for link_form in link_formset %}
-
-                {{ link_form.fields.id }}
+{#                {{ link_form.fields.id }}#}
 
                 <div class="link-formset">
-                    <label>Name</label>
+                    <label>Name and URL</label>
                     {{ link_form.name }}
                     {% if link_form.name.errors %}
                         {% for error in link_form.name.errors %}
@@ -44,7 +41,6 @@
                         {% endfor %}
                     {% endif %}
 
-                    <label>URL</label>
                     {{ link_form.url }}
                     {% if link_form.url.errors %}
                         {% for error in link_form.url.errors %}

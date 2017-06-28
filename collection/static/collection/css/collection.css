@@ -111,9 +111,7 @@
 #collectible_option_btns {
     display: flex;
     justify-content: center;
-    border-top: 2px solid black;
-    margin-top: 3%;
-
+    margin: 1%;
 }
 
 #add_links {
