@@ -98,12 +98,12 @@ main {
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 .full {
-    /*background: #31b0d5 url(/static/images/home_bg_img.jpg) no-repeat center center fixed;*/
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*background-size: cover;*/
-    /*-o-background-size: cover;*/
-    background: #E8D500;
+    background: #31b0d5 url(/static/images/home_bg_img4.001-001.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    /*background: #E8D500;*/
 
 }
 
@@ -132,7 +132,8 @@ h1 {
 
 #home_header {
     border-bottom: 4px solid black;
-    padding: 0;
+    border-top: 4px solid black;
+    padding: 0 15px;
 }
 
 h3 {
@@ -177,8 +178,6 @@ h4 {
 	color: #000;
 }
 
-
-
 .btn-12Wrapper .btn:hover {
     background-color: #31b0d5;
 	color: #000;
@@ -209,7 +208,9 @@ h4 {
 
 footer {
     margin-top: 0;
+    padding: 6% 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #E84B00;
@@ -219,8 +220,22 @@ footer {
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+#logout_btn {
+    font-size: 1.1em;
+	background-color: #E84B00;
+    margin: 20px 30px;
+	padding: 8px 40px;
+	color: #fff;
+    border: 1px solid black;
+	border-radius: 10px;
+    transition: background-color .4s;
+    outline: none;
+}
 
-
+#logout_btn:hover {
+    background-color: #31b0d5;
+	color: #000;
+}
 
 
 /* --------------------------

@@ -41,7 +41,7 @@ def logout(request):
 
     """
     django_logout(request)
-    return redirect()
+    return redirect(LOGOUT_REDIRECT_URL)
 
 
 def register(request):

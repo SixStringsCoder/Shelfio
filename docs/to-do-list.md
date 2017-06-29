@@ -1,10 +1,11 @@
 
 **TO DO LIST**
 
-2. look into embed code and how to create white page duplicate of a Collection.
 
-3. Make access to users to an Edit Area while logged in
+1. Make access to users to an Edit Webpage (i.e. the Collectible view) while logged in
 
-4. Add placeholders to Link Model for URL fields
+2. Add placeholders to Link Model for URL fields
 
-5. Add a User Logout link
+4. Edit Contact page (Model connected to User Account?)
+
+5. Deployment (do soon)
