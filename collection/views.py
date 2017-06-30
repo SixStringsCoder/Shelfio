@@ -38,13 +38,13 @@ def category(request, username):
 
 # def collections_public(request):
 #     """
-#     All of a user's Collections View
+#     All 'Status=Public' Collections Gallery View for all users
 #
 #     """
 #
 #     collections = Collection.objects.filter(owner__username=username)
 #     context = {'category': category, 'collections': collections}
-#     return render(request, 'collection/collections.html', context)
+#     return render(request, 'collection/collections_public.html', context)
 
 
 

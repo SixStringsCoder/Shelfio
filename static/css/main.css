@@ -96,7 +96,7 @@ main {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    height: auto;
+    min-height: calc( 100vh - 171.09);
     padding-top: 4%;
     padding-bottom: 5%;
 }

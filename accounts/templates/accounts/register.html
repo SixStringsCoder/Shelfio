@@ -1,13 +1,15 @@
 {# This is the registration and sign up page #}
 {% extends 'base.html' %}
 
+{% load static %}
+
 {%  block title %}
     <title>Registration Form (Shelfio)</title>
 {% endblock %}
 
 
 {% block extra_head %}
-     <link rel="stylesheet" type="text/css" href="/static/accounts/css/accounts.css">
+     <link rel="stylesheet" type="text/css" href="{%  static "accounts/css/accounts.css" %}">
 {% endblock %}
 
 
