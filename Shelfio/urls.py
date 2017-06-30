@@ -49,7 +49,7 @@ urlpatterns = [
     url(r'^contact', contact, name='contact'),
     url(r'^about', about, name='about'),
 
-    # Collection App
+    # Collection App User Specific
     url(r'^(?P<username>[a-z0-9_]+)/', include('collection.urls', namespace="collections")),
 ]
 

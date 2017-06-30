@@ -16,3 +16,18 @@ a. Test out Add User Image
 
 ******* Learn about Deployment (do soon)
 
+
+
+
+
+
+
+-------------------------
+        SANDBOX
+-------------------------
+
+loop over collection.owners
+    if Public collections 
+        display Public collection.image
+
+each image is a link to specific Collection page (i.e. no modal)

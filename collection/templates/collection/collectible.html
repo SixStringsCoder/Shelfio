@@ -58,6 +58,7 @@
         </div>
     </section>
 
+    {% if request.user.is_authenticated %}
     <section>
      <!-- EDIT BUTTON AREA -->
         <!--Arrows to open and close Button Panel-->
@@ -76,5 +77,6 @@
         </aside>
 
     </section>
+    {% endif %}
 
 {% endblock %}

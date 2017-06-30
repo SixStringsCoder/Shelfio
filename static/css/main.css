@@ -75,7 +75,14 @@ label {
 }
 
 
-
+#logged_in {
+    width: 30%;
+    position: absolute;
+    top: 33%;
+    right: -8%;
+    color: #E84B00;
+    font-size: .8em;
+}
 
 /*--------------------
         BODY

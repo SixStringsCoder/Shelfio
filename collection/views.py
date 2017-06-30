@@ -36,15 +36,15 @@ def category(request, username):
 
 
 
-# def collections_public(request):
-#     """
-#     All 'Status=Public' Collections Gallery View for all users
-#
-#     """
-#
-#     collections = Collection.objects.filter(owner__username=username)
-#     context = {'category': category, 'collections': collections}
-#     return render(request, 'collection/collections_public.html', context)
+def collections_public(request, status):
+    """
+    All 'Status=Public' Collections Gallery View for all users
+
+    """
+
+    collections = Collection.objects.filter(status='PUBL')
+    context = {'collections': collections}
+    return render(request, 'collection/collections_public.html', context)
 
 
 

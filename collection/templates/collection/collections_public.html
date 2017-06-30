@@ -18,110 +18,21 @@
 
         <div class="container">
             <div class="row">
-            {# Collection heading #}
-            <div class="col-lg-12">
-                <h1 class="page-header">{{ collection.name }} Collection</h1>
-                <h3 class="page-header">Gallery View</h3>
-            </div>
+                {# Collection heading #}
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{ collection.name }} Collection</h1>
+                    <h3 class="page-header">Gallery View</h3>
+                </div>
 
-            {# FOR LOOP - Show all collectibles in Collection #}
-             {% for collectible in collectibles %}
-{#                 {{ collectible.id }}#}
-                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <div data-collectible="{{ forloop.counter }}" class="myBtn collectible_gallery">
-                        {# Link to Modal window of collectible details #}
-                        <img class="thumbnail img-responsive" alt="collectible_image" src="{{ collectible.image.url }}"/>
-                    </div>
+                 <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                     <figure>
+                        {# Images representing each Public Collection #}
+                        <img class="thumbnail img-responsive" alt="collectible_image" src="{{ collection.image.url }}"/>
+                        <figcaption>{{ collection.name }} by {{ collection.owner }}</figcaption>
+                     </figure>
                  </div>
+            </div> <!-- end .row-->
+        </div> <!-- end .container-->
 
-
-               <!-------------------------------
-                ---------------------------------
-                        THE MODAL WINDOW
-                ---------------------------------
-                --------------------------------->
-                <div id="galleryModal_{{ forloop.counter }}" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content" id="collect_detail">
-                        <span class="close">&times;</span>
-
-                        <section id="coll_container">
-                            <div>
-                                {# Collection name #}
-                                <h5 class="coll_header_2">{{ collectible.collection }}</h5>
-
-                                {# Collectible Image and Name #}
-                                <figure class="coll_img">
-                                    <img class="img_modal" src="{{ collectible.image.url }}">
-                                </figure>
-
-                                {# Collectible Heading #}
-                                <h3 class="coll_header">{{ collectible.name }}</h3>
-
-                                {# Collectible description #}
-                                <section class="description">
-                                <p>{{ collectible.description }}</p>
-                                </section>
-
-                                <hl id="specs_head"><strong>Details</strong></hl>
-                                <ul class="coll_specs">
-                                    <li><span>Manufactored by</span>: {{ collectible.creator }}</li>
-                                    <li><span>Artist</span>: {{ collectible.artist }}</li>
-                                    <li><span>Publisher</span>: {{ collectible.publisher }}</li>
-                                    <li><span>Published (Year)</span>: {{ collectible.pubyear }}</li>
-                                    <li><span>Copyright</span>: {{ collectible.copyright }}</li>
-                                    <li><span>Serial Number</span>: {{ collectible.identifier }}</li>
-                                    <li><span>Entry created on</span>: {{ collectible.created }}</li>
-                                    <li><span>Entry updated on</span>: {{ collectible.modified }}</li>
-                                </ul>
-
-                                <div class="additional_links_area">
-                                <h4 id="add_links">Additional Links:</h4>
-                                    <div class="coll_links_area">
-                                        {% for link in collectible.links.all %}
-                                            {# to solve spaces in URLs us regex (?P<name>[\w\ ]+) #}
-                                            <a class="btn_small" href="{{ link.url }}">{{ link.name }}</a>
-                                        {% endfor %}
-                                            <!-- input button as PDF download -->
-{#                                          <input type="button" onclick="window.location='{{ link_form.url }}';_gaq.push(['_trackEvent', 'Downloads', 'eBooks', 'Burmese Monks Tales PDF']);" name="Add" value="{{ link_form.name }}" class="btn">#}
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- EDIT BUTTON AREA -->
-{#                        <!--Arrows to open and close Button Panel-->#}
-{#                        <div id="arrow_area">#}
-{#                                <span id="down_arrow">&#x261E;</span>#}
-{#                                <span id="up_arrow">&#x2620;</span>#}
-{#                        </div>#}
-
-                        <aside id="modal_edit_btns_area">
-                            <!-- Buttons Panel - Starts Hidden-->
-                            <div id="Modal_collectible_option_btns">
-                                <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
-                                <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
-                                <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
-                            </div>
-                        </aside>
-
-                    </div>  <!-- end of .modal-content -->
-                </div> <!-- end of .modal -->
-
-            {% endfor %}  <!-- end FOR LOOP-->
-
-        </div> <!-- end .row-->
-    </div> <!-- end .container-->
-
-        <!-- Reveals Embed Code-->
-        <aside class="embed_code_btn_pos">
-              <button class="embed_code_btn btn btn-default">Get Embed Code</button>
-        </aside>
-        <!-- Embed Code in input text field-->
-        <div class="iframe-wrapper embed_code_field">
-        {% autoescape off %}
-               <input id="embed_code_textfield" type="text" value='{{ collection.make_embed }}' >
-        {% endautoescape %}
-        </div>
     {% endblock %}
 </section>
