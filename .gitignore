@@ -1,7 +1,7 @@
 # My Exclusions
 media/
 static/fonts/
-
+*.xml
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template

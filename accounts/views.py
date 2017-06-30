@@ -1,13 +1,12 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as django_login
-from django.contrib.auth import logout as django_logout
 from django.contrib.auth .forms import AuthenticationForm, PasswordChangeForm
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, CustomUserUpdateForm
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
-from Shelfio.settings import LOGOUT_REDIRECT_URL
+
 
 
 def login(request):
@@ -33,15 +32,6 @@ def login(request):
 
     context = { 'form': form }
     return render(request, 'accounts/login.html', context)
-
-
-def logout(request):
-    """
-    Logout redirect
-
-    """
-    django_logout(request)
-    return redirect(LOGOUT_REDIRECT_URL)
 
 
 def register(request):
