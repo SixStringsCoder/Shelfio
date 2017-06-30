@@ -58,12 +58,23 @@
         </div>
     </section>
 
-    <aside id="collectible_option_btns">
-        <div>
-            <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
-            <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
-            <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
+    <section>
+     <!-- EDIT BUTTON AREA -->
+        <!--Arrows to open and close Button Panel-->
+        <div id="arrow_area">
+                <span id="down_arrow">&#x261E;</span>
+                <span id="up_arrow">&#x2620;</span>
         </div>
-    </aside>
+
+        <aside id="edit_btns_area">
+            <!-- Buttons Panel - Starts Hidden-->
+            <div id="collectible_option_btns">
+                <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
+                <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
+                <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
+            </div>
+        </aside>
+
+    </section>
 
 {% endblock %}

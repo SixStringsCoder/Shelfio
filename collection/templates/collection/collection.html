@@ -90,13 +90,18 @@
                         </section>
 
                         <!-- EDIT BUTTON AREA -->
-                        <aside id="collectible_option_btns">
-                            <div>
+                        <aside id="edit_btns_area">
+                            <div id="collectible_option_btns">
                                 <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
                                 <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
                                 <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
                             </div>
                         </aside>
+                            <!-- Arrows to open and close Buttons Panel -->
+                            <div id="arrow_area">
+                                <span id="down_arrow">&#x2207;</span>
+                                <span id="up_arrow">&#x2206;</span>
+                            </div>
 
                     </div>  <!-- end of .modal-content -->
                 </div> <!-- end of .modal -->

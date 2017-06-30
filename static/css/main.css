@@ -90,7 +90,12 @@ body {
 
 /* base.html yellow BG */
 main {
-    background-color: #FFDA00;
+    /*background-color: #FFDA00;*/
+    background: #31b0d5 url(/static/images/home_bg_img4.001-001.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     height: auto;
     padding-top: 4%;
     padding-bottom: 5%;

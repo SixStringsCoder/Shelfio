@@ -108,12 +108,6 @@
     flex-wrap: wrap;
 }
 
-#collectible_option_btns {
-    display: flex;
-    justify-content: center;
-    margin: 1%;
-}
-
 #add_links {
     margin-bottom: 30px;
 }
@@ -129,6 +123,48 @@
 #weblinks li a {
     padding: 30px;
 }
+
+
+
+/* ----- Arrows to open and close Button Panel ------*/
+#down_arrow {
+    display: block;
+    font-size: 4em;
+}
+
+#down_arrow:active {
+    display: block;
+}
+
+#up_arrow {
+    display: block;
+    font-size: 4em;
+}
+
+#up_arrow {
+    display: none;
+}
+
+#arrow_area {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 10%;
+}
+
+/*-------- Button Panel ------*/
+#edit_btns_area{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#collectible_option_btns{
+    display: none;
+    justify-content: center;
+    margin: 1%;
+}
+
 
 
 /*--------------------

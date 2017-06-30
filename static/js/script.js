@@ -20,6 +20,21 @@ $('.close').on('click', function() {
 });
 
 
+
+// Show the Buttons-Edit-Area in Collectible View
+$('#down_arrow').on('click', function() {
+   $('#collectible_option_btns').slideDown('slow');
+   $('#down_arrow').fadeOut('fast');
+   $('#up_arrow').fadeIn( 1000 ).show('slow');
+});
+
+// Hides the Buttons-Edit-Area in Collectible View
+$('#up_arrow').on('click', function(){
+    $('#collectible_option_btns').slideUp('slow');
+    $('#up_arrow').fadeOut('fast');
+    $('#down_arrow').fadeIn( 1000 ).show('slow');
+});
+
 /*----------------------------
          EMBED CODE
 -----------------------------*/

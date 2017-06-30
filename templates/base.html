@@ -22,6 +22,10 @@
     <!-- HIDE LINK URLS to CSS-->
     {% load static %}
 
+        <!-- Reset and Normalize CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static "vendor/normalize.css" %}">
+        <link rel="stylesheet" type="text/css" href="{% static "vendor/reset.css" %}">
+
          <!-- jQuery UI CSS -->
         <link rel="stylesheet" type="text/css" href="{% static "vendor/jquery-ui.min.css" %}">
         <link rel="stylesheet" type="text/css" href="{% static "vendor/jquery-ui.structure.min.css" %}">
@@ -118,7 +122,6 @@
     {% load static %}
     <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
     <script src="{% static "vendor/jquery-ui.min.js" %}"></script>
-    <script src="{% static "js/jquery.js" %}"></script>
     <script src="{% static "js/script.js" %}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static "js/bootstrap.min.js" %}"></script>

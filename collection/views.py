@@ -35,6 +35,19 @@ def category(request, username):
     return render(request, 'collection/collections.html', context)
 
 
+
+# def collections_public(request):
+#     """
+#     All of a user's Collections View
+#
+#     """
+#
+#     collections = Collection.objects.filter(owner__username=username)
+#     context = {'category': category, 'collections': collections}
+#     return render(request, 'collection/collections.html', context)
+
+
+
 def collections(request, username):
     """
     All of a user's Collections View
@@ -44,9 +57,6 @@ def collections(request, username):
     collections = Collection.objects.filter(owner__username=username)
     context = {'category': category, 'collections': collections}
     return render(request, 'collection/collections.html', context)
-
-
-
 
 
 @login_required  # Uses Django module to require login and disallow anonymous posting
