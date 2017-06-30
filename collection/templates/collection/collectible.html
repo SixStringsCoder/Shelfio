@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    {% if request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}  {# only is user is logged in #}
     <section>
      <!-- EDIT BUTTON AREA -->
         <!--Arrows to open and close Button Panel-->
@@ -70,9 +70,9 @@
         <aside id="edit_btns_area">
             <!-- Buttons Panel - Starts Hidden-->
             <div id="collectible_option_btns">
-                <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
-                <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
-                <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
+                <a id="edit_btn" class="save btn btn-default" href="{% url 'collections:collectible_edit' username=request.user collectible_slug=collectible.slug %}">Edit</a>
+                <a id="addnew_btn" class="save btn btn-default" href="{% url 'collections:collectible_form' username=request.user %}">Add Another</a>
+                <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collection:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
             </div>
         </aside>
 

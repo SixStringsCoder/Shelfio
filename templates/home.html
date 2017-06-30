@@ -87,27 +87,49 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <!-- View All User's Collections -->
+                    {% if request.user.is_authenticated %}
                     <li>
-                        <a href="/{{ request.user }}/collections">My Gallery</a>
+                        <a href="{% url 'collections:collections_gallery' username=request.user %}">My Gallery</a>
                     </li>
                     <!-- View Collection create Form -->
                     <li>
-                        <a href="/{{ request.user }}/collection/create/">New Collection</a>
+                        <a href="{%  url 'collections:collection_form' username=request.user %}">New Collection</a>
                     </li>
                     <!-- View Collectible create Form -->
                     <li>
-                        <a href="/{{ request.user }}/collectible/create/">Add Collectible</a>
+                        <a href="{% url 'collections:collectible_form' username=request.user %}">Add Collectible</a>
                     </li>
+                    {% endif %}
+
                     <li>
                         <a href="{% url "about" %}">About</a>
                     </li>
+
                     <li>
                         <a href="{% url "contact" %}">Contact</a>
                     </li>
+                {% if request.user.is_anonymous %}
                     <li>
-                        <a href="/accounts/login">Log In</a>
+                        <a href="{% url 'accounts:register' %}">Register</a>
                     </li>
+                {% endif %}
+                {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'accounts:logout' %}">Log out</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'accounts:login' %}">Log In</a>
+                    </li>
+                {% endif %}
                 </ul>
+                {% if request.user.is_authenticated %}
+                    <aside id="logged_in">
+                        <p>You are logged in as {{ request.user }}</p>
+                    </aside>
+                    {% else %}
+                {% endif %}
+
             </div>
             <!-- /.navbar-collapse -->
         </div>

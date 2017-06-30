@@ -99,9 +99,9 @@
                         <aside id="modal_edit_btns_area">
                             <!-- Buttons Panel - Starts Hidden-->
                             <div id="Modal_collectible_option_btns">
-                                <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
-                                <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
-                                <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
+                                <a id="edit_btn" class="save btn btn-default" href="{% url 'collections:collectible_edit' username=request.user collectible_slug=collectible.slug %}">Edit</a>
+                                <a id="addnew_btn" class="save btn btn-default" href="{% url 'collections:collectible_form' username=request.user %}">Add Another</a>
+                                <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collections:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
                             </div>
                         </aside>
 
@@ -120,7 +120,9 @@
         <!-- Embed Code in input text field-->
         <div class="iframe-wrapper embed_code_field">
         {% autoescape off %}
+            <label>
                <input id="embed_code_textfield" type="text" value='{{ collection.make_embed }}' >
+            </label>
         {% endautoescape %}
         </div>
     {% endblock %}

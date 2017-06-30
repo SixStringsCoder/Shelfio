@@ -30,7 +30,7 @@ def login(request):
             else:
                 messages.add_message(request, messages.ERROR, f'You do not have an account. Please register.')
 
-    context = { 'form': form }
+    context = {'form': form}
     return render(request, 'accounts/login.html', context)
 
 

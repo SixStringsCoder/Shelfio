@@ -12,13 +12,13 @@ urlpatterns = [
 
 
     # Collections Form, View, Embed View
-    url(r'^collection/create/$', collection_form, name='collection_form'),   # form
+    url(r'collection/create/$', collection_form, name='collection_form'),   # form
     url(r'collection/(?P<collection_slug>[a-z0-9\-]+)/', collection, name='collection_detail'),  # view
     url(r'collection_embed/(?P<collection_slug>[a-z0-9\-]+)/', collection_embed, name='collection_embed'), # embed view - less styling
 
 
     # Collectible View, Form, and Edit
-    url(r'^collectible/create/$', collectible_form, name='collectible_form'),  # form
+    url(r'collectible/create/$', collectible_form, name='collectible_form'),  # form
     url(r'collectible/(?P<collectible_slug>[a-z0-9\-]+)/$', collectible, name='collectible_detail'),  # detail
-    url(r'^collectible/edit/(?P<collectible_slug>[a-z0-9\-]+)/$', collectible_edit, name='collectible_edit'),  # edit
+    url(r'collectible/edit/(?P<collectible_slug>[a-z0-9\-]+)/$', collectible_edit, name='collectible_edit'),  # edit
 ]
