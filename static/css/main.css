@@ -54,6 +54,7 @@ label {
 
 .navbar-brand {
     color: #f7f7f7 !important;
+    font-size: 1.4em;
 }
 
 .navbar-brand:hover {
@@ -80,8 +81,9 @@ label {
     position: absolute;
     top: 33%;
     right: -8%;
-    color: #E84B00;
+    color: #31b0d5;
     font-size: .8em;
+    font-family: 'Amaranth', sans-serif;;
 }
 
 /*--------------------

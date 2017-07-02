@@ -72,7 +72,7 @@
             <div id="collectible_option_btns">
                 <a id="edit_btn" class="save btn btn-default" href="{% url 'collections:collectible_edit' username=request.user collectible_slug=collectible.slug %}">Edit</a>
                 <a id="addnew_btn" class="save btn btn-default" href="{% url 'collections:collectible_form' username=request.user %}">Add Another</a>
-                <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collection:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
+                <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collections:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
             </div>
         </aside>
 

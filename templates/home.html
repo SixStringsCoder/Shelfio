@@ -1,142 +1,11 @@
-<!DOCTYPE html>
-<html class="full" lang="en">
+{% extends 'base.html' %}
 
-<!--Bootstrap template from https://startbootstrap.com/template-overviews/full/-->
-<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="">
-
-    <title>Shelfio</title>
-
-    <link rel="apple-touch-icon" href="https://apple-touch-icon.png">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Amaranth|Chau+Philomene+One|Days+One|Paytone+One" rel="stylesheet">
-
-
-    {% load static %}
-
-    {%  block extra_head %}
-
-        <!-- Reset and Normalize CSS -->
-        <link rel="stylesheet" type="text/css" href="{% static "vendor/normalize.css" %}">
-        <link rel="stylesheet" type="text/css" href="{% static "vendor/reset.css" %}">
-
-         <!-- jQuery UI CSS -->
-        <link rel="stylesheet" href="{% static "vendor/jquery-ui.min.css" %}">
-        <link rel="stylesheet" href="{% static "vendor/jquery-ui.structure.min.css" %}">
-        <link rel="stylesheet" href="{% static "vendor/jquery-ui.theme.min.css" %}">
-
-        <!-- Bootstrap Core CSS -->
-        <link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+    {%  block title %}
+    <title>Home Page</title>
     {% endblock %}
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-{#        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>#}
-{#        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>#}
-    <![endif]-->
-
-</head>
-
-<body>
-
-{#    <!-- Navigation RIFF-->#}
-{#    #}
-{#    {% if request.user.is_authenticated %}#}
-{##}
-{#       Hello, {{ request.user }}#}
-{#        <a>Logout</a>#}
-{##}
-{#    {% else %}#}
-{#        <a>Register/a>#}
-{#        <a>LogIn</a>#}
-{##}
-{#    {% endif %}#}
-
-
-    {#  Navigation Bar  #}
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-{#                <!-- Optional logo -->#}
-{#                 <a class="navbar-logo" href="#">#}
-{#                    <img src="static/images/shelfio_logo.jpg" alt="">#}
-{#                </a>#}
-                <!-- Word Brand -->
-                <a class="navbar-brand" href="#">Shelfio</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <!-- View All User's Collections -->
-                    {% if request.user.is_authenticated %}
-                    <li>
-                        <a href="{% url 'collections:collections_gallery' username=request.user %}">My Gallery</a>
-                    </li>
-                    <!-- View Collection create Form -->
-                    <li>
-                        <a href="{%  url 'collections:collection_form' username=request.user %}">New Collection</a>
-                    </li>
-                    <!-- View Collectible create Form -->
-                    <li>
-                        <a href="{% url 'collections:collectible_form' username=request.user %}">Add Collectible</a>
-                    </li>
-                    {% endif %}
-
-                    <li>
-                        <a href="{% url "about" %}">About</a>
-                    </li>
-
-                    <li>
-                        <a href="{% url "contact" %}">Contact</a>
-                    </li>
-                {% if request.user.is_anonymous %}
-                    <li>
-                        <a href="{% url 'accounts:register' %}">Register</a>
-                    </li>
-                {% endif %}
-                {% if request.user.is_authenticated %}
-                    <li>
-                        <a href="{% url 'accounts:logout' %}">Log out</a>
-                    </li>
-                {% else %}
-                    <li>
-                        <a href="{% url 'accounts:login' %}">Log In</a>
-                    </li>
-                {% endif %}
-                </ul>
-                {% if request.user.is_authenticated %}
-                    <aside id="logged_in">
-                        <p>You are logged in as {{ request.user }}</p>
-                    </aside>
-                    {% else %}
-                {% endif %}
-
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-
+{% block content %}
     <!-- Header -->
     <div id="heading_container">
 {#        <p class="home_words_fx">stamps</p>#}
@@ -146,24 +15,13 @@
                 <h3>Get organized, yo!</h3>
                 <br>
                 <div class="btn-12Wrapper wrapper">
-                <a class="btn btn-1Wrapper" href="/accounts/login/">Get Going</a>
+                <a class="btn btn-1Wrapper" href="{% url 'accounts:login' %}">Get Going</a>
                 </div>
             </div>
         </header>
     </div>
+{% endblock %}
 
-
-    <!-- jQuery -->
-    <script src="/static/vendor/jquery-3.2.1.min.js"></script>
-    <script src="/static/vendor/jquery-ui.min.js"></script>
-    <script src="/static/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/static/js/bootstrap.min.js"></script>
-
-    <!-- JS Test Area -->
-    <script></script>
-
-</body>
-
-</html>
+     <!-- Footer -->
+    {%  block content_footer %}  {# Don't want footer on Home page #}
+    {% endblock %}

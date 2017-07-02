@@ -30,7 +30,6 @@ router.register(r'collectibles', CollectibleViewSet)
 
 
 urlpatterns = [
-    # url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
 
     url(r'^base', base, name='base'),
 
@@ -38,7 +37,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # Accounts
-    url(r'accounts', include('accounts.urls', namespace='accounts')),
+    url(r'accounts/', include('accounts.urls', namespace='accounts')),
 
     # Wire up our API using automatic URL routing.
     # Additionally, we include login URLs for the browsable API.

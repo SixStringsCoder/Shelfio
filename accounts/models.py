@@ -7,9 +7,8 @@ def profile_upload_handler(instance, filename) -> str:
     Handler to provide link to User profile image
 
     """
-    username = instance.owner.username
+    username = instance.collection.owner.username
     return f"{username}/{instance.name}/{filename}"
-
 
 
 class User(AbstractUser):
