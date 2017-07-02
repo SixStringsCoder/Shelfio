@@ -1,13 +1,12 @@
 from django.conf.urls import url
 from .views import (collection, collectible_form, collectible, collectible_edit,
-                    collection_form, category, collections, collection_embed, collections_public)
+                    collection_form, category, collections, collection_embed,)
 
 
 urlpatterns = [
     # All of User's Collections View
     # TODO: Change Category to Gallery or Collections
 
-    url(r'collections/public', collections_public, name='collections_public_gallery'),  # public view
     url(r'collections/', collections, name='collections_gallery'),  # view
 
 

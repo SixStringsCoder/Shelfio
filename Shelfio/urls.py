@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from accounts.api import UserViewSet
 from collection.api import CollectionViewSet, CollectibleViewSet
-from collection.views import home, base, contact, about
+from collection.views import home, base, contact, about, collections_public
 
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
@@ -30,7 +30,6 @@ router.register(r'collectibles', CollectibleViewSet)
 
 
 urlpatterns = [
-
     url(r'^base', base, name='base'),
 
     # The Admin
@@ -47,6 +46,9 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^contact', contact, name='contact'),
     url(r'^about', about, name='about'),
+
+    # public view (i.e. not logged-in) of Collections
+    url(r'^public/(?P<status>[A-Z]+)/', collections_public, name='collections_public_gallery'),
 
     # Collection App User Specific
     url(r'^(?P<username>[a-z0-9_]+)/', include('collection.urls', namespace="collections")),
