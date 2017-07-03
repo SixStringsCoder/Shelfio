@@ -103,14 +103,10 @@
                             </div>
                         </section>
 
-                        <!-- EDIT BUTTON AREA -->
-                        <aside id="collectible_option_btns">
-                            <div>
-                                <a id="edit_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/edit/{{ collectible.slug }}">Edit</a>
-                                <a id="addnew_btn" class="save btn btn-default" href="/{{ request.user }}/collectible/create/">Add Another</a>
-                                <a id="view_coll_btn" class="save btn btn-default" href="/{{ request.user }}/collection/{{ collectible.collection.slug }}">View Collection</a>
-                            </div>
-                        </aside>
+                        <!-- EDIT-ADD-VIEW BUTTON AREA -->
+                        {%  block edit_add_view_buttons %}
+                            {% include 'collection/edit_add_view_buttons.html' %}
+                        {%  endblock %}
 
                     </div>  <!-- end of .modal-content -->
                 </div> <!-- end of #myModal -->

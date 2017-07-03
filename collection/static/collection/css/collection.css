@@ -127,25 +127,25 @@
 
 
 /* ----- Arrows to open and close Button Panel ------*/
-#down_arrow {
+#edit_show {
     display: block;
     font-size: 4em;
 }
 
-#down_arrow:active {
+#edit_show:active {
     display: block;
 }
 
-#up_arrow {
+#edit_hide{
     display: block;
     font-size: 4em;
 }
 
-#up_arrow {
+#edit_hide{
     display: none;
 }
 
-#arrow_area {
+#edit_area {
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
