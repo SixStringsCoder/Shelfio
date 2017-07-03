@@ -1,11 +1,10 @@
 
 **TO DO LIST**
 
-a. Test out Add User Image
+a. Test out Add User Image (************not working Image field required problem)
 
-1. Give access to users to an Edit features only while logged in
-
-1b. Visitors' view that shows 'Public' User Collections
+1b. Visitors' view that shows 'Public' User Collections - STARTED and works without Images being linked - 
+********Links to User collections don't work - username still required in URL...******
 
 2. Add placeholders to Link Model for URL fields
 
@@ -16,8 +15,7 @@ a. Test out Add User Image
 
 ******* Learn about Deployment (do soon)
 
-
-
+****adjust hrefs to Template URLS!!!!!--ENDLESS!!!!
 
 
 

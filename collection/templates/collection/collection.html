@@ -95,15 +95,16 @@
 {#                                <span id="down_arrow">&#x261E;</span>#}
 {#                                <span id="up_arrow">&#x2620;</span>#}
 {#                        </div>#}
-
-                        <aside id="modal_edit_btns_area">
-                            <!-- Buttons Panel - Starts Hidden-->
-                            <div id="Modal_collectible_option_btns">
-                                <a id="edit_btn" class="save btn btn-default" href="{% url 'collections:collectible_edit' username=request.user collectible_slug=collectible.slug %}">Edit</a>
-                                <a id="addnew_btn" class="save btn btn-default" href="{% url 'collections:collectible_form' username=request.user %}">Add Another</a>
-                                <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collections:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
-                            </div>
-                        </aside>
+                        {% if request.user.is_authenticated %}
+                            <aside id="modal_edit_btns_area">
+                                <!-- Buttons Panel - Starts Hidden-->
+                                <div id="Modal_collectible_option_btns">
+                                    <a id="edit_btn" class="save btn btn-default" href="{% url 'collections:collectible_edit' username=request.user collectible_slug=collectible.slug %}">Edit</a>
+                                    <a id="addnew_btn" class="save btn btn-default" href="{% url 'collections:collectible_form' username=request.user %}">Add Another</a>
+                                    <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collections:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
+                                </div>
+                            </aside>
+                        {% endif %}
 
                     </div>  <!-- end of .modal-content -->
                 </div> <!-- end of .modal -->
