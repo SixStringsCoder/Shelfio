@@ -68,6 +68,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li>
+                            <a href="{% url 'collections_public_gallery' status='PUBL' %}">The Gallery</a>
+                        </li>
                         <!-- View All User's Collections -->
                         {% if request.user.is_authenticated %}  {# Must be signed in #}
                             <li>
@@ -82,13 +85,6 @@
                                 <a href="{% url 'collections:collectible_form' username=request.user %}">Add Collectible</a>
                             </li>
                         {% endif %}
-
-                            <li>
-                                <a href="{% url "about" %}">About</a>
-                            </li>
-                            <li>
-                                <a href="{% url "contact" %}">Contact</a>
-                            </li>
                         {% if request.user.is_anonymous %}
                             <li>
                                 <a href="{% url 'accounts:register' %}">Register</a>
@@ -127,7 +123,7 @@
         </section>
     </main>
 
-        <!-- Footer -->
+    <!-- Footer -->
     {%  block content_footer %}
         {% include 'footer.html' %}
     {% endblock %}

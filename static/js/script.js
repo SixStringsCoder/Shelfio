@@ -3,7 +3,6 @@
 */
 
 
-
 /*---------------------------
  MODAL WINDOW - DETAIL VIEW
 -----------------------------*/
@@ -43,3 +42,14 @@ $('.embed_code_btn').click(function() {
     console.log('Embed code button clicked!');
    $('.embed_code_field').show('slow');
 });
+
+
+
+
+
+/*----------------------------
+   DRAG AND DROP - Sortable
+-----------------------------*/
+
+
+

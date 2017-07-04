@@ -8,7 +8,7 @@ def profile_upload_handler(instance, filename) -> str:
 
     """
     username = instance.collection.owner.username
-    return f"{username}/{instance.name}/{filename}"
+    return f"{username}/{filename}"
 
 
 class User(AbstractUser):
@@ -22,7 +22,7 @@ class User(AbstractUser):
 
     """
     nickname = models.CharField(max_length=256)
-    image = models.ImageField(upload_to=profile_upload_handler),
+    image = models.ImageField(upload_to=profile_upload_handler, null=True, blank=True),
 
 
-    REQUIRED_FIELDS = ['nickname', 'email']
+    REQUIRED_FIELDS = ['nickname', 'email', 'image']

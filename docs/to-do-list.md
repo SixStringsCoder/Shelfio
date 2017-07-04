@@ -1,21 +1,19 @@
 
 **TO DO LIST**
 
-a. Test out Add User Image (************not working Image field required problem)
+a. Test out Add User Image (************not working "Image field required" problem even if image is provided)
 
-1b. Visitors' view that shows 'Public' User Collections - STARTED and works without Images being linked - 
-********Links to User collections don't work - username still required in URL...******
+
+- Add + symbol to Categories when creating a New Collection to create Categories on-the-fly
 
 2. Add placeholders to Link Model for URL fields
 
 4. Edit Contact page (Model connected to User Account?)
 
-5. Drag and Drop with Sortable (http://rubaxa.github.io/Sortable/)
-
+5. Drag and Drop with Sortable (http://rubaxa.githwub.io/Sortable/)
 
 ******* Learn about Deployment (do soon)
 
-****adjust hrefs to Template URLS!!!!!--ENDLESS!!!!
 
 
 

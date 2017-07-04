@@ -51,7 +51,7 @@ urlpatterns = [
     url(r'^public/(?P<status>[A-Z]+)/', collections_public, name='collections_public_gallery'),
 
     # Collection App User Specific
-    url(r'^(?P<username>[a-z0-9_]+)/', include('collection.urls', namespace="collections")),
+    url(r'^(?P<username>[A-Za-z0-9_]+)/', include('collection.urls', namespace='collections')),
 ]
 
 if settings.DEBUG:

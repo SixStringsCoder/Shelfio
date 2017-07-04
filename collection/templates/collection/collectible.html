@@ -48,12 +48,16 @@
             </ul>
 
             <div class="additional_links_area">
-                <h4 id="add_links">Additional Links:</h4>
+            <h4 id="add_links">Additional Links:</h4>
+                {% if request.user.is_authenticated %}
                     <div class="coll_links_area">
                         {% for link in collectible.links.all %}
                             <a class="btn_small" href="{{ link.url }}">{{ link.name }}</a>
                         {% endfor %}
                     </div>
+                 {%  else %}
+                    <h4>Log in or <a href="{% url 'accounts:register' %}">Register</a> to get access to Additional Links and downloads.</h4>
+                {% endif %}
             </div>
         </div>
     </section>

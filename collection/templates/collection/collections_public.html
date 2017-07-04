@@ -28,10 +28,11 @@
                 {% for collection in collections %}
                      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                          <div>
-{#                            <a href="{% url 'collections:collection_detail' username=request.user collection_slug=collection.slug %}">#}
+                            <a href="{% url 'collections:collection_detail' username=request.user collection_slug=collection.slug %}">
                                 <img class="thumbnail img-responsive" alt="user_collection_images" src="{{ collection.image.url }}"/>
-{#                            </a>#}
-                             <div>{{ collection.name|linebreaks  }} by {{ collection.owner|linebreaks }} Created on: {{ collection.created|date:"F j, Y"}}</div>
+                            </a>
+                            {# Collection name, creator and date created  #}
+                            <div>{{ collection.name|linebreaks  }} by {{ collection.owner|linebreaks }} Created on: {{ collection.created|date:"F j, Y"}}</div>
                          </div>
                      </div>
                 {% endfor %}
