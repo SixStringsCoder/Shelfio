@@ -81,8 +81,8 @@ def collection_form(request, username):
             # Add non-required additions to instance if needed
             collection.save()
             # Django Message module
-            messages.add_message(request, messages.SUCCESS, f'The Collection {collection.name} has been added successfully.')
-            return redirect(f'/collection/{collection.slug}/')
+            messages.add_message(request, messages.SUCCESS, f'The Collection "{collection.name}" has been added successfully.')
+            return redirect(f'/{request.user}/collection/{collection.slug}/')
 
 
     context = {'form': form}
@@ -139,8 +139,8 @@ def collectible_form(request, username):
             link_formset.save()
 
             # Django Message module
-            messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been added successfully.')
-            return redirect(f'collectible/{collectible.slug}/')
+            messages.add_message(request, messages.SUCCESS, f'"{collectible.name}" has been added successfully.')
+            return redirect(f'/{request.user}/collectible/{collectible.slug}/')
 
     context = {'form': form, 'link_formset': link_formset}
     return render(request, 'collection/collectible_form.html', context)
@@ -183,8 +183,9 @@ def collectible_edit(request, username, collectible_slug):
             link_formset.save()
 
             # Django Message module
-            messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been added successfully.')
-            return redirect(f'collectible/{collectible.slug}/')
+            messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been edited successfully.')
+            return redirect(f'/{request.user}/collectible/{collectible.slug}/')
+        # {% url 'collections:collectible_detail' username=request.user %}
 
     context = {'form': form, 'link_formset': link_formset, 'collectible': collectible}
     return render(request, 'collection/collectible_edit.html', context)
