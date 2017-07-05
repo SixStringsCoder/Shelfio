@@ -252,6 +252,72 @@ footer {
 }
 
 
+
+
+/*--------------------
+     CONTACT FORM
+----------------------*/
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 20px;
+    font-family: 'Amaranth', sans-serif;
+    color: #E84B00;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: inherit;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+
+.alert-success {
+    color: #fff;
+    background-color: #31b0d5;
+    box-shadow: 2px 2px 5px black;
+}
+
+.contact_form_success {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.success_text {
+    font-size: 1.3em;
+    color: #000;
+    font-family: 'Days One', serif;
+}
+
+/* Form Background */
+.well {
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+
+/*--------------------
+       ABOUT US
+----------------------*/
+
+.img-circle {
+    border-radius: 50%;
+    margin-left: 69px;
+    box-shadow: 0 2px 2px grey;
+    transition: border-radius 1s;
+}
+
+.img-circle:hover {
+    border-radius: 10%;
+    margin-left: 69px;
+    box-shadow: 0 2px 2px grey;
+}
+
+
+
 /* --------------------------
 -----------------------------
         Media Queries

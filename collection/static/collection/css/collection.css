@@ -235,9 +235,9 @@
 }
 
 
-/*-----------------------------
-   MODAL WINDOW DETAIL POP-UP
--------------------------------*/
+/*-------------------------------------------------------
+   MODAL WINDOW DETAIL POP-UP (shows in Collection View)
+------------------------------------------------------------*/
 /* source: https://www.w3schools.com/howto/howto_css_modals.asp */
 
 /* The Modal (background) */
@@ -328,6 +328,20 @@
     to {transform:scale(0)}
 }
 
+
+/*-----------------------------
+   PUBLIC COLLECTIONS GALLERY
+-------------------------------*/
+
+/*  image captions */
+.pub_collection_caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25%;
+    font-size: 1.2em;
+    font-family: 'Days One', serif;
+}
 
 
 /* --------------------------
