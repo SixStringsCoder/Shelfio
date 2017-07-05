@@ -52,7 +52,7 @@
                 {% if request.user.is_authenticated %}
                     <div class="coll_links_area">
                         {% for link in collectible.links.all %}
-                            <a class="btn_small" href="{{ link.url }}">{{ link.name }}</a>
+                            <a class="btn_small" href="{{ link.url }}" target="_blank">{{ link.name }}</a>
                         {% endfor %}
                     </div>
                  {%  else %}

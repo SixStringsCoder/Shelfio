@@ -32,7 +32,7 @@
                                 <img class="thumbnail img-responsive" alt="user_collection_images" src="{{ collection.image.url }}"/>
                             </a>
                             {# Collection name, creator and date created  #}
-                            <div>{{ collection.name|linebreaks  }} by {{ collection.owner|linebreaks }} Created on: {{ collection.created|date:"F j, Y"}}</div>
+                            <div class="pub_collection_caption">{{ collection.name|linebreaks  }} by {{ collection.owner|linebreaks }} Created on: {{ collection.created|date:"F j, Y"}}</div>
                          </div>
                      </div>
                 {% endfor %}

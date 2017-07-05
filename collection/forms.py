@@ -25,18 +25,11 @@ class LinkModelForm(forms.ModelForm):
     class Meta:
         model = Link
         fields = ('name', 'url',)
+        # widgets = {
+        #     'name': forms.TextInput(attrs={'placeholder': 'Type Link Name Here'}),
+        #     'url': forms.URLInput(attrs={'placeholder': 'https://www.somelink.com'}),
+        # }
 
-    name = forms.CharField(
-        max_length=100,
-        widget=forms.TextInput(attrs={
-            'placeholder': 'Type Link Name Here',
-        }),
-        required=False)
-    url = forms.URLField(
-        widget=forms.URLInput(attrs={
-            'placeholder': 'Type URL Here',
-        }),
-        required=False)
 
 
 

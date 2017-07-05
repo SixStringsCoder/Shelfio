@@ -12,7 +12,6 @@
 {% endblock %}
 
 
-
 {% block content %}
     <section id="coll_form">
         <h3>Enter a New Item</h3>
@@ -30,7 +29,7 @@
             <h4>Web or File Links</h4>
 
             {% for link_form in link_formset %}
-{#                {{ link_form.fields.id }}#}
+            {# attribution: http://whoisnicoleharris.com/2015/01/06/implementing-django-formsets.html#step-4-html--js#}
 
                 <div class="link-formset">
                     <label>Name and URL</label>

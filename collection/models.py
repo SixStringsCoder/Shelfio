@@ -4,8 +4,7 @@ from accounts.models import User
 from django.utils.text import slugify
 
 
-
-    # TODO: add a Priority Field to help user organize a Collection
+# TODO: add a Priority Field or jQuery UI Sort to help user organize a Collection
 
 def collection_upload_handler(instance, filename) -> str:
     """
@@ -47,7 +46,6 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = "Categories"  # fixes Admin spelling of Categorys to Categories
-
 
 
 class Collection(models.Model):

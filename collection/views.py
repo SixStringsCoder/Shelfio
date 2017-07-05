@@ -183,7 +183,7 @@ def collectible_edit(request, username, collectible_slug):
             link_formset.save()
 
             # Django Message module
-            messages.add_message(request, messages.SUCCESS, f'{collectible.name} has been edited successfully.')
+            messages.add_message(request, messages.SUCCESS, f'"{collectible.name}" has been edited successfully.')
             return redirect(f'/{request.user}/collectible/{collectible.slug}/')
         # {% url 'collections:collectible_detail' username=request.user %}
 
@@ -193,7 +193,7 @@ def collectible_edit(request, username, collectible_slug):
 
 def contact(request):
     """
-    Contact Page View
+    Contact Form
 
     """
 
