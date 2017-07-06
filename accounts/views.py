@@ -52,7 +52,7 @@ def register(request):
 
             send_mail(
                 subject='You have a Shelfio account!',
-                message='Sign in and get organized!  Share your Collections with friends!',
+                message=f'Sign in {request.user} and get organized!  Share your Collections with friends!',
                 from_email='rshanlon3@gmail.com',
                 recipient_list=[user.email],
                 fail_silently=False,

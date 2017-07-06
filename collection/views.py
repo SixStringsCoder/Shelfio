@@ -120,15 +120,17 @@ def collectible_form(request, username):
 
     """
 
-    LinkFormSet = inlineformset_factory(Collectible, Link, fields=('name', 'url'), extra=2)
+    LinkFormSet = inlineformset_factory(Collectible, Link, fields=('name', 'url'), extra=1)
 
     if request.method == "GET":
         form = CollectibleModelForm()
+        form.fields['collection'].queryset = Collection.objects.filter(owner=request.user)  # shows only Collections in Drop Down menu on form
         link_formset = LinkFormSet()
 
     elif request.method == "POST":
-        form = CollectibleModelForm(data=request.POST, files=request.FILES)
         link_formset = LinkFormSet(request.POST)
+        form = CollectibleModelForm(data=request.POST, files=request.FILES)
+
 
         if form.is_valid() and link_formset.is_valid():
             collectible = form.save(commit=False) # no blank or invalid data submissions
@@ -136,7 +138,12 @@ def collectible_form(request, username):
             collectible.created = timezone.now()
             # Add non-required additions to instance if needed
             collectible.save()
-            link_formset.save()
+            # link_formset.save()
+
+            for link_form in link_formset:
+                link = link_form.save(commit=False)
+                link.collectible = collectible
+                link.save()
 
             # Django Message module
             messages.add_message(request, messages.SUCCESS, f'"{collectible.name}" has been added successfully.')
@@ -163,7 +170,6 @@ def collectible_edit(request, username, collectible_slug):
 
     """
     collectible = Collectible.objects.get(slug=collectible_slug)  # Shows collectible details as editable fields
-
     LinkFormSet = inlineformset_factory(Collectible, Link, fields=('name', 'url'), extra=2)
 
     if request.method == "GET":

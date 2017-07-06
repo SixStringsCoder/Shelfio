@@ -26,11 +26,11 @@
                 {% csrf_token %}
                 <!-- inserts form as paragraphs -->
                 {{ form.as_p }}
-                <button type="submit" class="save btn btn-default">Register</button>
+                <button type="submit" class="save btn btn-default">Sign In</button>
             </form>
     </section>
 
     <aside class="sign_up">
-        <h4>No account? <a href="{% url 'accounts:register' %}">Sign up now!</a></h4>
+        <h4>No account? <a id="sign_up_now" href="{% url 'accounts:register' %}">Sign up now!</a></h4>
     </aside>
 {% endblock %}

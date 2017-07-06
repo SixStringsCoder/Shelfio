@@ -105,7 +105,7 @@ main {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    min-height: calc(100vh - 171.09);
+    min-height: calc(100vh);
     padding-top: 4%;
     padding-bottom: 5%;
 }
@@ -198,6 +198,10 @@ h4 {
     animation: krazy_corners 1.6s infinite cubic-bezier(.29,.26,.62,.61);
 }
 
+.btn:visited {
+    color: #000;
+}
+
 @keyframes krazy_corners {
 	0% {border-radius: 0 20px 20px 20px;}
 	20% {border-radius: 20px 0 20px 20px;}
@@ -222,7 +226,7 @@ h4 {
 
 footer {
     margin-top: 0;
-    padding: 6% 0;
+    padding: 8% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -340,14 +344,22 @@ legend {
         margin: 10px 0 30px;
     }
 
+     footer {
+        padding: 16% 0;
     }
+
+}
 
 
 /* Small Screens */
 @media (max-width: 569px) {
     h1 {
-    font-size: 4em;
-    padding-top: 40px;
+        font-size: 4em;
+        padding-top: 40px;
+    }
+
+    footer {
+        padding: 20% 0;
     }
 
 }

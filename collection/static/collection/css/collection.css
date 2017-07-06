@@ -128,21 +128,21 @@
 
 
 /* ----- Arrows to open and close Button Panel ------*/
-#edit_show {
+.edit_show {
     display: block;
     font-size: 4em;
 }
 
-#edit_show:active {
+.edit_show:active {
     display: block;
 }
 
-#edit_hide{
+.edit_hide{
     display: block;
     font-size: 4em;
 }
 
-#edit_hide{
+.edit_hide{
     display: none;
 }
 
@@ -160,7 +160,7 @@
     align-items: flex-end;
 }
 
-#collectible_option_btns{
+.collectible_option_btns{
     display: none;
     justify-content: center;
     margin: 0;

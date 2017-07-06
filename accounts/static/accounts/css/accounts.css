@@ -22,6 +22,15 @@ form {
     margin: 30px auto;
 }
 
+#sign_up_now {
+    color: #31b0d5;
+    transition: color .2s;
+}
+
+#sign_up_now:hover {
+    color: #E84B00;
+}
+
 /* Alter Bootstrap Styling for Django messages  */
 .messages {
     display: flex;

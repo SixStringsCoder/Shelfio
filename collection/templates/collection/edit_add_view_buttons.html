@@ -5,13 +5,13 @@
         <!-- EDIT-ADD-VIEW BUTTON AREA -->
             <!--Arrows to open and close Button Panel-->
             <div id="edit_area">
-                    <span id="edit_show">&#x261E;</span>
-                    <span id="edit_hide">&#x2718;</span>
+                    <span class="edit_show">&#x261E;</span>
+                    <span class="edit_hide">&#x2718;</span>
             </div>
 
             <aside id="edit_btns_area">
                 <!-- Buttons Panel - Starts Hidden-->
-                <div id="collectible_option_btns">
+                <div class="collectible_option_btns">
                     <a id="edit_btn" class="save btn btn-default" href="{% url 'collections:collectible_edit' username=request.user collectible_slug=collectible.slug %}">Edit</a>
                     <a id="addnew_btn" class="save btn btn-default" href="{% url 'collections:collectible_form' username=request.user %}">Add Another</a>
                     <a id="view_coll_btn" class="save btn btn-default" href="{% url 'collections:collection_detail' username=request.user collection_slug=collectible.collection.slug %}">View Collection</a>
