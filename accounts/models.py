@@ -18,11 +18,11 @@ class User(AbstractUser):
     Users within the Django authentication system are represented by this
     model.
 
-    Username, password and email are required. Other fields are optional.
+    Username, image and email are required. Other fields are optional.
 
     """
     nickname = models.CharField(max_length=256)
     image = models.ImageField(upload_to=profile_upload_handler, null=True, blank=True),
 
 
-    REQUIRED_FIELDS = ['nickname', 'email', 'image']
+    REQUIRED_FIELDS = ['nickname', 'email',]

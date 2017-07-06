@@ -44,7 +44,7 @@ def register(request):
         form = CustomUserCreationForm()
 
     elif request.method == 'POST':
-        form = CustomUserCreationForm(data=request.POST)
+        form = CustomUserCreationForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             user = form.save(commit=False)
             # Add non-required additions to instance if needed

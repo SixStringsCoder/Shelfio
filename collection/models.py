@@ -61,7 +61,7 @@ class Collection(models.Model):
 
     owner = models.ForeignKey(User, related_name="collections")
     status = models.CharField(max_length=4, choices=STATUS_CHOICES)
-    image = models.ImageField(upload_to=collection_upload_handler, height_field=None, width_field=None, max_length=100)
+    image = models.ImageField(upload_to=collection_upload_handler, max_length=100)
     name = models.CharField(max_length=256)
     type = models.CharField(max_length=128)
     categories = models.ManyToManyField(Category, related_name='collections')
