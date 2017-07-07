@@ -8,6 +8,14 @@ class CollectionModelForm(forms.ModelForm):
         fields = ('status', 'name', 'type',
                   'image', 'categories',)
 
+    def clean_name(self):
+        data = self.cleaned_data.get('name')
+        if len(data) <= 2:
+            raise forms.ValidationError('Form must be invalid. Name must be more than 1 character.')
+        if data.isdigit():
+            raise forms.ValidationError('Form cannot be all digits.')
+        return data
+
 
 class CollectibleModelForm(forms.ModelForm):
     class Meta:

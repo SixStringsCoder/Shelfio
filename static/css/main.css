@@ -75,7 +75,6 @@ label {
     color: #E84B00;
 }
 
-
 #logged_in {
     width: 30%;
     position: absolute;
@@ -84,6 +83,10 @@ label {
     color: #31b0d5;
     font-size: .8em;
     font-family: 'Amaranth', sans-serif;;
+}
+
+.user {
+    color: #fff;
 }
 
 /*--------------------
@@ -105,7 +108,7 @@ main {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    min-height: calc(100vh);
+    min-height: calc(100vh - 200);
     padding-top: 4%;
     padding-bottom: 5%;
 }

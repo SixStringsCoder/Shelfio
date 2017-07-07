@@ -3,7 +3,7 @@
 
 - Fix EDIT-ADD to only work for a User's collectibles not with another user's collecibles (i.e. I can edit someone else's collectble)
 
-- Fix Add User Image (** "Image field required" problem even if image is provided)
+- Add Use Avatar to template while signed
 
 - Add + symbol to Categories when creating a New Collection to create Categories on-the-fly (?????)
 

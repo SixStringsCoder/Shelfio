@@ -15,7 +15,7 @@
                 <h3>Get organized, yo!</h3>
                 <br>
                 <div class="btn-12Wrapper wrapper">
-                    {% if request.user.is_authenticated %} {# signed in go to New Collection Form #}
+                    {% if request.user.is_authenticated %} {# if signed in go to New Collection Form #}
                     <a class="btn" href="{% url 'collections:collection_form' username=request.user %}">Get Going</a>
                     {% else %} {# not signed in go to Log In Form #}
                     <a class="btn" href="{% url 'accounts:login' %}">Get Going</a>
