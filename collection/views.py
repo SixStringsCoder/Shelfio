@@ -31,6 +31,8 @@ def category(request, username):
 
     """
 
+
+
     context = {'category': category}
     return render(request, 'collection/collections.html', context)
 

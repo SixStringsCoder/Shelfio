@@ -22,7 +22,15 @@
                 {% csrf_token %}
                 <!-- inserts form as paragraphs -->
                 {{ form.as_p }}
+                <div class="add_symbol_container">
+                    <span class="add_symbol"><i class="glyphicon glyphicon-plus"></i></span>
+                </div>
                 <button type="submit" class="save btn btn-default">Save</button>
             </form>
     </section>
+{% endblock %}
+
+
+{% block extra_end %}
+    <script src="{% static "collection/js/collection.js" %}"></script>
 {% endblock %}

@@ -100,13 +100,15 @@
                             </li>
                         {% endif %}
                     </ul>
-                {% if request.user.is_authenticated %}
+                {% if request.user.is_anonymous %}
+                    <aside id="logged_in">
+                        <p>You are not logged in.</p>
+                    </aside>
+                    {% else %}
                     <aside id="logged_in">
                         <p>You are logged in as <span class="user">{{ request.user }}</span>
                         <img class="userimage" src="{{ request.user.image.url }}"></p>
                     </aside>
-                    {% else %}
-
                 {% endif %}
 
                 </div>

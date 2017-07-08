@@ -46,6 +46,19 @@ $('.embed_code_btn').click(function() {
 
 
 
+/*----------------------------
+   Add Collection Category +
+-----------------------------*/
+$('.add_symbol').on('click', function() {
+    new_category = prompt('Name the new category.');
+    let category_name = $("<option>").text(new_category);
+    $('select[name=categories]').append(category_name);
+});
+
+
+
+
+
 
 /*----------------------------
    DRAG AND DROP - Sortable

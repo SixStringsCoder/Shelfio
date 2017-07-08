@@ -77,16 +77,27 @@ label {
 
 #logged_in {
     width: 30%;
+    display: inline-block;
     position: absolute;
-    top: 33%;
+    top: 25%;
     right: -8%;
     color: #31b0d5;
     font-size: .8em;
-    font-family: 'Amaranth', sans-serif;;
+    font-family: 'Amaranth', sans-serif;
 }
 
 .user {
     color: #fff;
+}
+
+.userimage {
+    width: 10%;
+    height: 10%;
+    margin-left: 1%;
+    margin-top: -6px;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 5px;
 }
 
 /*--------------------
