@@ -1,12 +1,12 @@
 {%  block edit_add_view_buttons %}
 
     {% if request.user.is_authenticated %}  {# only is user is logged in #}
-        <section>
+        <section id="edit_add_view_section">
         <!-- EDIT-ADD-VIEW BUTTON AREA -->
             <!--Arrows to open and close Button Panel-->
             <div id="edit_area">
-                    <span class="edit_show">&#x261E;</span>
-                    <span class="edit_hide">&#x2718;</span>
+                    <span class="edit_show glyphicon glyphicon-triangle-bottom"></span>
+                    <span class="edit_hide glyphicon glyphicon-triangle-top"></span>
             </div>
 
             <aside id="edit_btns_area">

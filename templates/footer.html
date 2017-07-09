@@ -10,8 +10,8 @@
                     </div>
                 </div>
                 <div>
-                    <button id='logout_btn'><a href="{% url 'about' %}">About</a></button>
-                    <button id='logout_btn'><a href="{% url 'contact' %}">Contact</a></button>
+                    <input type="button" value="About" class='footer_btn' onclick='window.location.href="{% url 'about' %}"' />
+                    <input type="button" value="Contact" class='footer_btn' onclick='window.location.href="{% url 'contact' %}"' />
                 </div>
             {% endblock %}
         </footer>

@@ -1,6 +1,8 @@
 
 **TO DO LIST**
 
+- Make Gallery pictures uniform
+
 - Fix EDIT-ADD to only work for a User's collectibles not with another user's collecibles (i.e. I can edit someone else's collectble)
 
 - Add Use Avatar to template while signed

@@ -152,7 +152,7 @@ main {
 
 h1 {
     color: #101010;
-    font-size: 8em;
+    font-size: 7em;
     /*padding-top: 40px;*/
     font-family: 'Days One', sans-serif;
     text-shadow: 1px 1px #fff;
@@ -162,7 +162,11 @@ h1 {
     border-bottom: 4px solid black;
     border-top: 4px solid black;
     padding: 0 15px;
+    font-size: 8em;
 }
+
+
+
 
 h3 {
     color: #101010;
@@ -252,7 +256,7 @@ footer {
     font-family: 'Alegreya Sans SC', sans-serif;
 }
 
-#logout_btn {
+.footer_btn {
     font-size: 1.1em;
 	background-color: #E84B00;
     margin: 20px 30px;
@@ -264,12 +268,10 @@ footer {
     outline: none;
 }
 
-#logout_btn:hover {
+.footer_btn:hover {
     background-color: #31b0d5;
 	color: #000;
 }
-
-
 
 
 /*--------------------
