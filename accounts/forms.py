@@ -10,6 +10,14 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
         fields = UserCreationForm.Meta.fields + ('nickname', 'image', 'email',)
+        help_texts = {
+            'username': ('Letters, digits and @/./+/-/_ only.'),
+            'password2': ('Verification.'),
+        }
+        widgets = {
+            'username': forms.TextInput(attrs={'placeholder': 'Required. 150 characters or fewer.'}),
+            'password2': forms.PasswordInput(attrs={'placeholder': 'Enter the same password.'}),
+        }
 
 
 class CustomUserUpdateForm(forms.ModelForm):

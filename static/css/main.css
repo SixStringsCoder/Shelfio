@@ -96,6 +96,8 @@ label {
     margin-left: 1%;
     margin-top: -6px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border: 1px solid white;
     padding: 5px;
 }
@@ -196,6 +198,8 @@ h4 {
 	color: #fff;
     border: 1px solid black;
 	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     transition: background-color .6s;
 }
 
@@ -207,6 +211,8 @@ h4 {
 	color: #fff;
     border: 1px solid black;
 	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     transition: background-color .4s;
 }
 
@@ -269,6 +275,8 @@ footer {
 	color: #fff;
     border: 1px solid white;
 	border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
     transition: background-color .4s;
     outline: none;
 }
@@ -330,6 +338,8 @@ legend {
 
 .img-circle {
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     margin-left: 69px;
     box-shadow: 0 2px 2px grey;
     transition: border-radius 1s;
@@ -337,10 +347,91 @@ legend {
 
 .img-circle:hover {
     border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
     margin-left: 69px;
     box-shadow: 0 2px 2px grey;
 }
 
+
+/*----------------------
+ Forms - General Layout
+
+ (source: http://callmenick.com/post/various-css-input-text-styles)
+-----------------------*/
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="url"] {
+  padding: 10px;
+  border: 4px solid #E84B00;
+  transition: border 0.3s;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  width: 20vw;
+}
+
+/* Outline Colors*/
+input[type="email"] { border: 4px solid #31b0d5;}
+
+/* Outline Color on focus*/
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="password"]:focus,
+input[type="password"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+input[type="file"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  border: 4px solid #88A528;
+  outline: none;
+}
+
+/* Image File Color */
+input[type="file"] {
+    outline: none;
+    height: 50;
+    background: transparent;
+    color: #E84B00;
+    border: 4px solid #E84B00;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    width: 20vw;
+}
+
+select {
+   border: 4px solid #E84B00;
+   height: 7vh;
+   width: 20vw;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   font-size: 1.2em;
+   color: #000;
+   padding: 5px 10px;
+   outline: none;
+}
+
+textarea {
+   border: 4px solid #E84B00;
+   height: 30vh;
+   width: 20vw;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   font-size: 1.2em;
+   color: #000;
+   padding: 5px 10px;
+   outline: none;
+}
 
 
 /* --------------------------

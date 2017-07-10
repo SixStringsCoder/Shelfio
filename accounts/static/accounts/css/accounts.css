@@ -13,7 +13,6 @@
     align-items: center;
 }
 
-
 .acc_form_heading {
     border-bottom: 4px solid black;
     border-top: 4px solid black;
@@ -26,11 +25,18 @@
     align-items: center;
 }
 
+
 /*--------------------
     Registration page
 ----------------------*/
 
 .reg_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg_form form {
     display: flex;
     flex-direction: column;
     align-items: center;

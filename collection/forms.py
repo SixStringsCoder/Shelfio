@@ -7,6 +7,10 @@ class CollectionModelForm(forms.ModelForm):
         model = Collection
         fields = ('status', 'name', 'type',
                   'image', 'categories',)
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'What\'s the name of your collection?'}),
+            'type': forms.TextInput(attrs={'placeholder': 'What type of collection is it?'}),
+        }
 
     def clean_name(self):
         data = self.cleaned_data.get('name')
@@ -22,6 +26,13 @@ class CollectibleModelForm(forms.ModelForm):
         model = Collectible
         fields = ('collection', 'image', 'name', 'description',
                   'creator', 'artist', 'publisher', 'identifier',)
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'What\'s the name of this collectible?'}),
+            'description': forms.Textarea(attrs={'placeholder': 'Details'}),
+            'creator': forms.TextInput(attrs={'placeholder': 'author | composer | builder | etc.'}),
+            'artist': forms.TextInput(attrs={'placeholder': 'painter | photographer | musician | etc.'}),
+            'identifier': forms.NumberInput(attrs={'placeholder': 'Serial | ISBN | (numbers only)'})
+        }
 
 
 class LinkModelForm(forms.ModelForm):

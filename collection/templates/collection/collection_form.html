@@ -14,7 +14,7 @@
 
 {% block content %}
     <section class="coll_form">
-        <h3 class="coll_form_heading">Create a New Collection</h3>
+        <h3 class="coll_form_heading">New Collection</h3>
         <!-- enctype encrypts image file to be stored in database -->
             <form action="" method="POST" enctype="multipart/form-data">
                 <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
@@ -23,7 +23,7 @@
                 <!-- inserts form as paragraphs -->
                 {{ form.as_p }}
                 <div class="add_symbol_container">
-                    <span class="add_symbol"><i class="glyphicon glyphicon-plus"></i></span>
+                    <span class="add_symbol"><i class="glyphicon glyphicon-plus"></i> Add Category</span>
                 </div>
                 <button type="submit" class="save btn btn-default">Save</button>
             </form>
