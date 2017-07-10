@@ -8,6 +8,7 @@ class CollectionModelForm(forms.ModelForm):
         fields = ('status', 'name', 'type',
                   'image', 'categories',)
         widgets = {
+            # 'status': forms.Select(attrs={'selected': 'Select One. ('Public' means everyone can see it.)'}),
             'name': forms.TextInput(attrs={'placeholder': 'What\'s the name of your collection?'}),
             'type': forms.TextInput(attrs={'placeholder': 'What type of collection is it?'}),
         }
@@ -48,8 +49,3 @@ class LinkModelForm(forms.ModelForm):
         #     'name': forms.TextInput(attrs={'placeholder': 'Type Link Name Here'}),
         #     'url': forms.URLInput(attrs={'placeholder': 'https://www.somelink.com'}),
         # }
-
-
-
-
-

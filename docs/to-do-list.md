@@ -3,29 +3,25 @@
 
 - Make Gallery pictures uniform
 
-- Fix EDIT-ADD to only work for a User's collectibles not with another user's collecibles (i.e. I can edit someone else's collectble)
+- Fix EDIT-ADD to only work for a User's collectibles not with another user's collecibles (i.e. I shouldn't be able to edit someone else's collectble)
 
-- Make Collection info editable
+-*** Add + symbol to Categories when creating a New Collection to create Categories on-the-fly (?????)
 
-- Add + symbol to Categories when creating a New Collection to create Categories on-the-fly (?????)
+- Add placeholders to Link Model for URL fields (started this)
 
-- Add placeholders to Link Model for URL fields (?????)
+- Get Profile update and password reset to work
 
-- Edit Contact page (sent via email)
+- Make Contact page post (send via email)
 
 - Drag and Drop with Sortable (http://rubaxa.githwub.io/Sortable/)
 
-******* Learn about Deployment (do soon)
+- Add ability to upload audio and show as HTML5 audio player
+
+- Add ability to add HTML to forms to embed audio, vidoe players, etc.
+
+- Add API to use computer's camera to take User Registration profile pic
 
 
+******* Deploy just to try it!
 
 
--------------------------
-        SANDBOX
--------------------------
-
-loop over collection.owners
-    if Public collections 
-        display Public collection.image
-
-each image is a link to specific Collection page (i.e. no modal)

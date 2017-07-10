@@ -103,6 +103,11 @@
 
         <!-- Reveals Embed Code-->
         <aside class="embed_code_btn_pos">
+              <a id="edit_btn" class="save btn_small" href="{% url 'collections:collection_edit' username=request.user collection_slug=collection.slug %}">Edit Collection Details</a>
+        </aside>
+
+        <!-- Reveals Embed Code-->
+        <aside class="embed_code_btn_pos">
               <button class="embed_code_btn btn_small">Get Embed Code</button>
         </aside>
         <!-- Embed Code in input text field-->

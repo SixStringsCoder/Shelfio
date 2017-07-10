@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     """
-    Landing page Template View
+    Landing Home page
 
     """
 
@@ -18,7 +18,7 @@ def home(request):
 
 def base(request):
     """
-    Base Page Template View
+    Base page template
 
     """
 
@@ -30,8 +30,6 @@ def category(request, username):
     All of a user's Collections View
 
     """
-
-
 
     context = {'category': category}
     return render(request, 'collection/collections.html', context)
@@ -113,6 +111,37 @@ def collection(request, username, collection_slug):
     collectibles = collection.items.all()
     context = {'collection': collection, 'collectibles': collectibles}
     return render(request, 'collection/collection.html', context)
+
+
+def collection_edit(request, username, collection_slug):
+    """
+    A single collection edit view
+
+    """
+    collection = Collection.objects.get(slug=collection_slug)  # Shows collection details as editable fields
+
+    if request.method == "GET":
+        form = CollectionModelForm(instance=collection)
+
+    elif request.method == "POST":
+        form = CollectionModelForm(instance=collection, data=request.POST, files=request.FILES)
+
+        if form.is_valid():
+            collection = form.save(commit=False) # no blank or invalid data submissions
+            # time stamp creation of collectible
+            collection.created = timezone.now()
+            # Add non-required additions to instance if needed
+            collection.save()
+
+            # Django Message module
+            messages.add_message(request, messages.SUCCESS, f'"{collection.name}" has been edited successfully.')
+            return redirect(f'/{request.user}/collection/{collection.slug}/')
+
+    context = {'form': form, 'collection': collection}
+    return render(request, 'collection/collection_edit.html', context)
+
+
+
 
 
 @login_required  # Uses Django module to require login and disallow anonymous posting
