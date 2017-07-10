@@ -52,7 +52,7 @@ $('.embed_code_btn').click(function() {
 -----------------------------*/
 
 $('.add_symbol').on('click', function() {
-    new_category = prompt('Name the new category.');
+    new_category = prompt('What\'s the name of your new category?');
     let category_name = $("<option>").text(new_category);
     $('select[name=categories]').append(category_name);
 });
