@@ -165,8 +165,13 @@ h1 {
     font-size: 8em;
 }
 
-
-
+/* Styles Header for Collection, Collections, Public Collections*/
+.page-header-h1 {
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    padding: 0 15px;
+    font-size: 5.6em;
+}
 
 h3 {
     color: #101010;
@@ -216,9 +221,9 @@ h4 {
     animation: krazy_corners 1.6s infinite cubic-bezier(.29,.26,.62,.61);
 }
 
-.btn:visited {
-    color: #000;
-}
+/*.btn:visited {*/
+    /*color: #f9f2f4;*/
+/*}*/
 
 @keyframes krazy_corners {
 	0% {border-radius: 0 20px 20px 20px;}
@@ -262,7 +267,7 @@ footer {
     margin: 20px 30px;
 	padding: 8px 40px;
 	color: #fff;
-    border: 1px solid black;
+    border: 1px solid white;
 	border-radius: 10px;
     transition: background-color .4s;
     outline: none;
@@ -362,6 +367,17 @@ legend {
 
      footer {
         padding: 16% 0;
+    }
+
+    #logged_in {
+    width: 30%;
+    display: inline-block;
+    position: absolute;
+    top: 25%;
+    right: 7%;
+    color: #31b0d5;
+    font-size: .6em;
+    font-family: 'Amaranth', sans-serif;
     }
 
 }

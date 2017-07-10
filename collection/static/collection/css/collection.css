@@ -2,6 +2,25 @@
  Created on June 16th by Steve Hanlon.  CSS file for collection app.
 */
 
+
+/*-----------------------------
+ Coll. Forms - General Layout
+-------------------------------*/
+
+.coll_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.coll_form_heading {
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    padding: 0 15px;
+}
+
+
 /*--------------------
    Collectible Form
 ----------------------*/
@@ -20,6 +39,7 @@
     background-color: #E84B00;
     border-color: #E84B00;
 }
+
 
 /*--------------------
    Collectible View
@@ -90,7 +110,6 @@
     line-height: 200%;
 }
 
-
 /* ----- BUTTONS for downloads and links ------*/
 
 .additional_links_area {
@@ -119,8 +138,6 @@
     padding: 30px;
 }
 
-
-
 /* ----- Arrows to open and close Button Panel ------*/
 
 #edit_area {
@@ -148,8 +165,6 @@
 .edit_hide{
     display: none;
 }
-
-
 
 /*-------- Button Panel ------*/
 #edit_btns_area{
@@ -190,6 +205,10 @@
 .collectible_gallery {
     max-width: 80%;
     height: auto;
+}
+
+.embed_code_btn {
+    outline: none;
 }
 
 .embed_code_btn_pos {
@@ -249,8 +268,8 @@
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%;
+    height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */

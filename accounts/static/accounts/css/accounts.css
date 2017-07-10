@@ -2,34 +2,59 @@
  Created on June 16th by Steve Hanlon.  CSS file for accounts app.
 */
 
+
+/*--------------------------------
+  Accounts Forms - General Layout
+----------------------------------*/
+
+.acc_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.acc_form_heading {
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    padding: 10px 15px;
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*--------------------
-       FORM
+    Registration page
 ----------------------*/
 
-form {
-    width: 100%;
-    margin-bottom: 100px
+.reg_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+/*#reg_form label {*/
+    /*font-size: 1.3em;*/
+/*}*/
+
 
 
 /*--------------------
     Log in page
 ----------------------*/
 
-#login_form {
-    width: 15%;
-    /*height: 65vh;*/
+.login_form {
     margin: 30px auto;
 }
 
-#sign_up_now {
-    color: #31b0d5;
-    transition: color .2s;
-}
 
-#sign_up_now:hover {
-    color: #E84B00;
-}
+/*--------------------
+    Django Messages
+----------------------*/
 
 /* Alter Bootstrap Styling for Django messages  */
 .messages {
@@ -46,26 +71,23 @@ form {
 }
 
 
-/*--------------------
-    Registration page
-----------------------*/
-
-#reg_form {
-    width: 100%;
-}
 
 
-#reg_form label {
-    font-size: 1.3em;
-}
-
-
-/*--------------------
-   Log In page
-----------------------*/
+/*------------------------
+   No Account - Sign Up!
+-------------------------*/
 
 .sign_up {
     display: flex;
     justify-content: flex-end;
     border-top: 1px solid black;
+}
+
+#sign_up_now {
+    color: #31b0d5;
+    transition: color .2s;
+}
+
+#sign_up_now:hover {
+    color: #E84B00;
 }

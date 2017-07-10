@@ -108,8 +108,8 @@
                     </aside>
                     {% else %}
                     <aside id="logged_in">
-                        <p>You are logged in as <span class="user">{{ request.user }}</span>
-                        <img class="userimage" src="{{ request.user.image.url }}"></p>
+                        <p>You are logged in as <a href="{% url 'accounts:profile' %}"><span class="user">{{ request.user }}</span>
+                        <img class="userimage" src="{{ request.user.image.url }}"></a></p>
                     </aside>
                 {% endif %}
 

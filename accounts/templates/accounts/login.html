@@ -17,10 +17,10 @@
 
     {{ form.errors }}
 
-    <section id="login_form">
-        <h3>Log in</h3>
+    <section class="login_form acc_form">
+        <h3 class="acc_form_heading">Log in</h3>
         <!-- enctype encrypts image file to be stored in database -->
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form id="login_form" action="" method="POST" enctype="multipart/form-data">
                 <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
                  a form on the actual website.  Makes sure a cookie is set on your browser -->
                 {% csrf_token %}
