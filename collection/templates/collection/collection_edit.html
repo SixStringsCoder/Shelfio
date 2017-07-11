@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{%  block title %}
+    <title>Collection Form</title>
+{% endblock %}
+
+
+{% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static "collection/css/collection.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <section class="coll_form">
+        <h3 class="coll_form_heading">New Collection</h3>
+        <!-- enctype encrypts image file to be stored in database -->
+            <form action="" method="POST" enctype="multipart/form-data">
+                <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
+                 a form on the actual website.  Makes sure cookie is set on your browser-->
+                {% csrf_token %}
+                <!-- inserts form as paragraphs -->
+                {{ form.as_p }}
+                <div class="add_symbol_container">
+                    <span class="add_symbol"><i class="glyphicon glyphicon-plus"></i> Add Category</span>
+                </div>
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
+    </section>
+{% endblock %}
+
+
+{% block extra_end %}
+    <script src="{% static "collection/js/collection.js" %}"></script>
+{% endblock %}

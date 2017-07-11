@@ -9,6 +9,7 @@
 
 
 {% block extra_head %}
+     <link rel="stylesheet" type="text/css" href="{% static "collection/css/collection.css" %}">
      <link rel="stylesheet" type="text/css" href="{% static "accounts/css/accounts.css" %}">
 {% endblock %}
 
@@ -19,8 +20,8 @@
     <!-- PASSWORD ERROR MSG-->
     <div>{{ passwordform.errors }}</div>
 
-    <section id="profile_form">
-        <h3>Update Profile</h3>
+    <section class="profile_form coll_form">
+        <h3 class="coll_form_heading">Update Profile</h3>
 
             <!-- PROFILE FORM -->
             <!-- enctype encrypts image file to be stored in database -->
@@ -34,7 +35,7 @@
             </form>
 
             <!-- CHANGE PASSWORD FORM -->
-        <h3>Update Password</h3>
+        <h3 class="coll_form_heading">Update Password</h3>
             <form action="{% url 'accounts:change_password' %}" method="POST">
                 <!-- csrf is cross site request forgery tag.  Make sure form submission comes from
                  a form on the actual website.  Makes sure a cookie is set on your browser -->

@@ -50,7 +50,7 @@ def register(request):
 
             send_mail(
                 subject='You have a Shelfio account!',
-                message=f'Sign in {request.user} and get organized!  Share your Collections with friends!',
+                message=f'Sign in, {request.user}, and get organized!  Share your Collections with friends!',
                 from_email='rshanlon3@gmail.com',
                 recipient_list=[user.email],
                 fail_silently=False,
@@ -73,6 +73,7 @@ def profile(request):
     Update User Info Form
 
     """
+
     password_form = PasswordChangeForm(user=request.user)
     if request.method == 'GET':
         form = CustomUserUpdateForm(instance=request.user)
@@ -84,7 +85,7 @@ def profile(request):
             # Add non-required additions to instance if needed
             user.save()
 
-            messages.add_message(request, messages.ERROR, f'Your user profile is updated!')
+            messages.add_message(request, messages.ERROR, f'{request.user}, your user profile is updated!')
             return redirect(f'/accounts/profile/')
 
     context = {'form': form, 'password_form': password_form}
@@ -119,7 +120,7 @@ def reset_pw(request):
             user = authenticate(username=username, password=raw_password)
             django_login(request, user)
 
-            messages.add_message(request, messages.INFO, f'Your password is updated!')
+            messages.add_message(request, messages.INFO, f'{request.user}, your password is updated!')
             return redirect('/')
         else:
             messages.add_message(request, messages.ERROR, f'{password_form.errors}')

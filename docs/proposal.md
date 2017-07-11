@@ -8,6 +8,8 @@
 
 # Shelfio
 ###### Alternative product name list
+- Capsule Collect
+- Time Capsule
 - Clickable Collectibles
 - Pack Rat
 - Collect-N-spect

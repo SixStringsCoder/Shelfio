@@ -17,6 +17,8 @@
     border-bottom: 4px solid black;
     border-top: 4px solid black;
     padding: 10px 15px;
+    width: 33%;
+    text-align: center;
 }
 
 #login_form {
@@ -63,19 +65,19 @@
 ----------------------*/
 
 /* Alter Bootstrap Styling for Django messages  */
-.messages {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    font-size: 3em;
-}
+/*.messages {*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*margin: 0;*/
+    /*padding-top: 2%;*/
+    /*font-size: 3em;*/
+/*}*/
 
-.alert-error {
-    color: #fff;
-    background-color: #E84B00;
-    border-color: #E84B00;
-}
-
+/*.alert-error {*/
+    /*color: #fff;*/
+    /*background-color: #31b0d5;*/
+    /*border-color: #31b0d5;*/
+/*}*/
 
 
 

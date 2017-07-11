@@ -11,11 +11,11 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = UserCreationForm.Meta.fields + ('nickname', 'image', 'email',)
         help_texts = {
-            'username': ('Letters, digits and @/./+/-/_ only.'),
+            'username': (''),
             'password2': ('Verification.'),
         }
         widgets = {
-            'username': forms.TextInput(attrs={'placeholder': 'Required. 150 characters or fewer.'}),
+            'username': forms.TextInput(attrs={'placeholder': 'Required. Letters, digits and @/./+/-/_ only.'}),
             'password2': forms.PasswordInput(attrs={'placeholder': 'Enter the same password.'}),
         }
 
