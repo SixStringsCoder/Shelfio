@@ -11,8 +11,8 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = UserCreationForm.Meta.fields + ('nickname', 'image', 'email',)
         help_texts = {
-            'username': (''),
-            'password2': ('Verification.'),
+            # 'username': (''),
+            'password2': 'Verification.',
         }
         widgets = {
             'username': forms.TextInput(attrs={'placeholder': 'Required. Letters, digits and @/./+/-/_ only.'}),
