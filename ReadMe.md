@@ -23,4 +23,5 @@ The idea comes from my current work at an online bookstore.  The online store ha
 
 For more details and sample UI, please click on <a href="proposal.md">this markdown file</a>.
     
-    
+link to project:
+<a href="docs/proposal.md">Steve's Proposal</a>

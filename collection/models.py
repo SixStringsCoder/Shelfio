@@ -94,6 +94,14 @@ class Collectible(models.Model):
 
     """
 
+    # # File type for Link to help generate necessary audio and video players - for future build
+    # COLLECTIBLE_TYPES = (
+    #     ('GEN', 'Generic'),
+    #     ('AUD', 'Audio'),
+    #     ('SHO', 'Pictures'),
+    #     ('VID', 'Video'),
+    # )
+
     collection = models.ForeignKey(Collection, related_name="items")
     image = models.ImageField(upload_to=collectible_upload_handler, height_field=None, width_field=None, max_length=200)
     name = models.CharField(max_length=256)
@@ -137,3 +145,10 @@ class Link(models.Model):
 
     def __str__(self):
         return self.name
+
+    # # Audio Player link maker
+    # def make_audio_link(self):
+    #     audio_skeleton = fr'<audio controls><source src="{url}" type="audio/{}">Your browser does not support the audio element.</audio>'
+    #
+    #     return audio_skeleton
+

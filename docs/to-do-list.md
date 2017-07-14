@@ -18,6 +18,13 @@
 
 - Add ability to add audio, video players, slideshows
     - Consider ability to upload audio and show as HTML5 audio player
+ 
+     audio_files = ['.mp3', '.acc', '.wma', '.m4a', '.ogg']
+     audio_link = link.url
+     
+        for file in audio_files:
+            if file in  audio_link
+            # insert this link into
 
 - Add API to use computer's camera to take User Registration profile pic
 https://www.html5rocks.com/en/tutorials/getusermedia/intro/#toc-gettingstarted
