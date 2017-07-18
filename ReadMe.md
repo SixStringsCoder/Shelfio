@@ -1,7 +1,7 @@
 # Capstone 2017 ("Custom Collections")
 
 
-PDX Code Guild Class capstone project to demonstrate programming skills learned in Full Stack Python course.
+This is Steve Hanlon's PDX Code Guild Class capstone project to demonstrate programming skills learned in Full Stack Python course.
 
 
 ## ToC

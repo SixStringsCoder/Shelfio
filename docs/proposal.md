@@ -35,7 +35,7 @@ Logged In - Nav bar changes
 
 
 All My Collections represented with its own page
-and each collections represented by an image
+and each collection represented by an image
 ![Home Page](images/Gallery_My_Collections1.png)
 <br><br>
 
@@ -204,19 +204,32 @@ If there is any actions your app needs to take in the background describe _each_
 
 ### MVP
 **Pick the minimum feature set for your product to work.**
-Everything else should go in the "further work" section.
+- Create User Accounts
+- Allow User to create custom collections
+- Allow User to add Collectibles (with details about the collectible) to those collections
+- Give ability to share these collections with others
+- Allow ability to embed a collection in another webpage
 
 ##### Models
-- 2 table database (Collection and Collectible) ForeignKey
+- <strong>User</strong>: to open an account
+- <strong>Categories</strong>: to classify collections
+- <strong>Collection</strong>: to store collectibles
+- <strong>Collectible</strong>: to store interesting details about a collectible
+- <strong>Links</strong>: to add more detail to a Collectible
 
 ##### Templates
 - [Home HTML](https://startbootstrap.com/template-overviews/the-big-picture/)
 - [Collectible Form HTML (Editing Presentation Window)](#samp5)
-- [Single Collection HTML (with Presentation Modal Window)](#samp6)
-- [All Collections HTML](https://startbootstrap.com/template-overviews/thumbnail-gallery/)
+- [Single Collection Gallery (with Presentation Modal Window)](images/eBook_collection1_update1.png)
+- [All Collections Gallery for a single user](images/Gallery_My_Collections1.png)
+- [Public Collections Gallery of all Users](images/public_collections1_view.png)
+- Accounts
+  - Registration form
+  - Log in form
+  - Update Profile and password forms
+- About webpage
+- Contact form webpage
 
-
-Write out a description of _every_ page and component and action!!!!!!
 
 
 ### Data Model
@@ -227,9 +240,10 @@ What do they represent?
 - [Collection](#samp6) ------> Collection Sets (e.g. books,
   stamps, DVDs, music,)
 - [collectible (item)](#samp4) ---------> A single item in a Collection
+- User Accounts
+- uploaded media for collections, collectibles, account profile image
+- form data pertinent to collections, collectibles, user profile
 
-
-How do you need to _search_ for specific instances of nouns?
 
 ### Category
 - name (allows for user to make sub-categories expanding on "type" in Collection model
@@ -263,50 +277,66 @@ How do you need to _search_ for specific instances of nouns?
 - collectible (Foreign Key)
 
 
-
 ### Technical Components
-What are the "moving parts" of your MVP?
-What are the things like "modules" you're going to write?
-How do they talk to each other?
 
-
-
-
-
-_Make decisions_ here and now.
-Do research and prototyping to figure out what libraries and technologies will help you solve your problems.
-Write up which ones you'll use.
-It's okay if they end up not working and you have to change your plans.
-
-- WSIWYG editor plug-in for user to customize Presentation Window and Collection's Display View
-
-- jQuery UI (use "draggable" and "droppable" interactions https://jqueryui.com/droppable/) for drag and drop feature to make <a name="samp2">form/Presentation Window</a>.  
-Also this plug-in for drag and drop jQuery form maker: https://formbuilder.online/
-
-- Bootstrap to help with form presentation and overall website appearance.
+- form submission using Django built-ins
+- image uploads using Django helper functions and Media storage
+- jQuery to provide modal windows for Collectibles
+- jQuery to allow for Hide/Show for collectible UI
+- Bootstrap to help with form presentation and overall website base appearance.
 
 
 ### Schedule
 
-Write out the order in which you will tackle your technical components of your MVP.
+1. Write Django Classes
+2. Write basic view functions
+3. Establish base template style and look
+4. work on Collection form (view and template)
+5. work on Collectible form (view and template)
+6. implement jQuery modal window and style window for collection view when clicking on a Collectible
+7. establish accounts app for user registration, log-in and profiles
+8. continually adjust CSS to make site uniform and understandable
+9. Add edit ability to collectibles and collections
+10. Add Django Formset to Collectible form to enable web links and downloads for a Collectible
+11. test out multiple user accounts with multiple collections
+12. work on website click routing to make sure those without an account get directed to Reg. page or those logged-out get routed to a Log-in.  After log-in route to collection gallery, etc.
+13. customize Nav bar with conditional statements in template to help out routing and signal when someone is signed in
+14. Add embed feature by providing a link accessed through jQuery.  (** Need to deploy to test out this feature on other sites.)
 
-What are the easy parts?
-What are the hard parts?
-Can you guess how long you'll take for each?
-
-Work on the tough and crucial parts first.
 
 ### Further Work
 
-All of the above parts are _just addressing your MVP_.
-Here you should outline other features you'd like to implement if you get "done" early.
-Order them by importance towards your high-level goal and what order you'll work on them later.
+- Add dropdown on Collection form for sub-categories of collections with specific fields relevant to common collectibles (books, instruments, stamps, comics, etc.).  This can help remove irrelevant fields and blank fields.
 
-Don't work on any of these features until **all of MVP is complete**.
+- Make Gallery pictures uniform through a module to auto-size pics in Collection gallery but not alter or distort picture that shows in Collectible view
+
+- Fix EDIT-ADD to only work for a User's collectibles not with another user's collectibles (i.e. I shouldn't be able to edit someone else's collectible)
+
+- Add + symbol to Categories when creating a New Collection to create Categories on-the-fly (?????)
+
+- Add placeholders to Link Model for URL fields (started this)
+
+- Get Profile update and password reset to work
+
+- Make Contact page post (send via email)
+
+- Drag and Drop with Sortable to allow user to shift collections and collectibles around in the Gallery (http://rubaxa.githwub.io/Sortable/)
+
+- Make Modal Window have a photo carousel for extra photos (or thumbnails)
+
+- Add ability to add audio, video players, slideshows
+    - Consider ability to upload audio and show as HTML5 audio player
+
+- Add API to use computer's camera to take User Registration profile pic
+https://www.html5rocks.com/en/tutorials/getusermedia/intro/#toc-gettingstarted
+
+- Incorporate search engine (search field on template to locate all Collections about 'cats' or 'musical instruments')
+
+
 
 ## Submission
 
-Create a _new_ git repo based on your project name [in GitHub](https://github.com/new).
+[Shelfio at Github](https://github.com/SixStringsCoder/Shelfio).
 Init that repository with a readme.
 Write up your proposal as `proposal.md` and link to it from the readme.
 I don't care that you learn all of the fancy parts of [writing Markdown documentation](https://help.github.com/articles/basic-writing-and-formatting-syntax/), but just get some basic sections that follow the rubric above.
