@@ -336,10 +336,12 @@ https://www.html5rocks.com/en/tutorials/getusermedia/intro/#toc-gettingstarted
 
 ## Submission
 
-[Shelfio at Github](https://github.com/SixStringsCoder/Shelfio).
-Init that repository with a readme.
-Write up your proposal as `proposal.md` and link to it from the readme.
-I don't care that you learn all of the fancy parts of [writing Markdown documentation](https://help.github.com/articles/basic-writing-and-formatting-syntax/), but just get some basic sections that follow the rubric above.
+[Shelfio at Github](https://github.com/SixStringsCoder/Shelfio)
+
+[Read Me](https://github.com/SixStringsCoder/Shelfio/blob/master/ReadMe.md)
+
+[Proposal](https://github.com/SixStringsCoder/Shelfio/blob/master/docs/proposal.md)
+
 
 Email me the URL to your capstone repo on GitHub before the proposal is due.
 
