@@ -1,12 +1,9 @@
-
+### Capstone Proposal 2017<br>by Steve Hanlon
 
 ![The Shelf where collectibles are presented](images/custom_collection3.jpeg)
 
 Updated 7-12-2017
 ![Home Page](images/custom_collection_update.png)
-
-### Capstone Proposal 2017<br>by Steve Hanlon
-
 
 
 # Shelfio
@@ -150,7 +147,6 @@ sample picture 9
 
 
   Log-in page
-
   ![Home Page](images/log_in1.png)
 
   Registration page
@@ -186,7 +182,6 @@ sample picture 9
 
 
 ### Frontend vs. Background activity
-If there is any actions your app needs to take in the background describe _each_ of them and how they change the underlying data your app saves.
 
 - Home Page ['Create a Collection'](#samp1) button when clicked
   1. open a prompt to ask the user to name the new Collection
@@ -203,19 +198,19 @@ If there is any actions your app needs to take in the background describe _each_
 
 
 ### MVP
-**Pick the minimum feature set for your product to work.**
+**Minimum feature set for Shelfio to work.**
 - Create User Accounts
 - Allow User to create custom collections
 - Allow User to add Collectibles (with details about the collectible) to those collections
 - Give ability to share these collections with others
-- Allow ability to embed a collection in another webpage
+
 
 ##### Models
 - <strong>User</strong>: to open an account
 - <strong>Categories</strong>: to classify collections
 - <strong>Collection</strong>: to store collectibles
 - <strong>Collectible</strong>: to store interesting details about a collectible
-- <strong>Links</strong>: to add more detail to a Collectible
+- <strong>Links</strong>: to add more detail to a Collectible with web links and file download options
 
 ##### Templates
 - [Home HTML](https://startbootstrap.com/template-overviews/the-big-picture/)
@@ -234,9 +229,6 @@ If there is any actions your app needs to take in the background describe _each_
 
 ### Data Model
 
-What are the persistent "nouns" you need to save across pages in your project MVP?
-What do they represent?
-
 - [Collection](#samp6) ------> Collection Sets (e.g. books,
   stamps, DVDs, music,)
 - [collectible (item)](#samp4) ---------> A single item in a Collection
@@ -246,7 +238,7 @@ What do they represent?
 
 
 ### Category
-- name (allows for user to make sub-categories expanding on "type" in Collection model
+- allows for user to make sub-category names expanding on "type" in Collection model)
 
 ### Collection
 - owner (Foreign Key)
@@ -282,7 +274,7 @@ What do they represent?
 - form submission using Django built-ins
 - image uploads using Django helper functions and Media storage
 - jQuery to provide modal windows for Collectibles
-- jQuery to allow for Hide/Show for collectible UI
+- jQuery to allow for Edit/Add/View buttons in collectible UI
 - Bootstrap to help with form presentation and overall website base appearance.
 
 
@@ -305,6 +297,7 @@ What do they represent?
 
 
 ### Further Work
+- - Allow ability to embed a collection in another webpage
 
 - Add dropdown on Collection form for sub-categories of collections with specific fields relevant to common collectibles (books, instruments, stamps, comics, etc.).  This can help remove irrelevant fields and blank fields.
 
@@ -342,8 +335,6 @@ https://www.html5rocks.com/en/tutorials/getusermedia/intro/#toc-gettingstarted
 
 [Proposal](https://github.com/SixStringsCoder/Shelfio/blob/master/docs/proposal.md)
 
-
-Email me the URL to your capstone repo on GitHub before the proposal is due.
 
 
 ### Brainstorming Area

@@ -1,4 +1,7 @@
 alabaster==0.7.9
+anaconda-client==1.6.0
+anaconda-navigator==1.5
+anaconda-project==0.4.1
 appnope==0.1.0
 appscript==1.0.1
 astroid==1.4.9
@@ -16,7 +19,7 @@ chardet==2.3.0
 chest==0.2.3
 click==6.7
 cloudpickle==0.2.2
-
+clyent==1.2.2
 colorama==0.3.7
 conda==4.3.14
 configobj==5.0.6
@@ -93,7 +96,6 @@ Pillow==4.0.0
 ply==3.9
 prompt-toolkit==1.0.9
 psutil==5.0.1
-psycopg2==2.6.2
 ptyprocess==0.5.1
 py==1.4.32
 pyasn1==0.1.9
@@ -148,3 +150,4 @@ xlrd==1.0.0
 XlsxWriter==0.9.6
 xlwings==0.10.2
 xlwt==1.2.0
+psycopg2==2.6.2
