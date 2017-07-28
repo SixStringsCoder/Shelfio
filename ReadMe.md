@@ -21,7 +21,4 @@ This is Steve Hanlon's PDX Code Guild Class capstone project to demonstrate prog
 
 The idea comes from my current work at an online bookstore.  The online store has been using an HTML table to display its collection of eBooks.  I'm seeking to change the table-look to a more attractive "bookshelf display" which shows just the covers of the eBooks.  The details of each eBook will be hidden from view but easily accessed by clicking the cover and shown in a modal window.  This will clean up the look of any webpage, making it more attractive with just icons linked to hidden details.  I'm investigating whether this idea can extend to all collections, not just books.  
 
-For more details and sample UI, please click on <a href="proposal.md">this markdown file</a>.
-    
-link to project:
-<a href="docs/proposal.md">Steve's Proposal</a>
+For more details and sample UI, please click on <a href="docs/proposal.md">Steve's Proposal</a>.
